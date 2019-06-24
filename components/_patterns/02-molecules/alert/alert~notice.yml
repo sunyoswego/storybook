@@ -1,0 +1,5 @@
+alert_modifiers: [ "notice" ]
+icon: "icon-notification2"
+message: "Mollison St is now open"
+message_content: |
+  <p>Due to extreme weather conditions reported by the National Weather Service, calling for dangerously low wind chill temperatures (as low as -35 degrees) and blizzard warnings that forecast blowing and drifting lake effect snow through Thursday evening, all SUNY Oswego classes, scheduled for today, Thursday, Jan. 31, are cancelled.  This applies to classes on the SUNY Oswego main campus and at our Syracuse campus.</p>

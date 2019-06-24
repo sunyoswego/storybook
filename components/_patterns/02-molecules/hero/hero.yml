@@ -1,0 +1,8 @@
+mini_hero_img_src: "//picsum.photos/1920/480"
+hero_img_src: "//picsum.photos/1920/768"
+hero_img_alt: ""
+hero_img_title: ""
+image_base_class: "hero"
+heading: "This is the heading text"
+dinger_text: "This is the dinger text"
+description_text: "This is the description"

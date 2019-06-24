@@ -1,0 +1,47 @@
+.header {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  .utility-nav {
+    display: none;
+
+    @include breakpoint($menu-breakpoint) {
+      display: flex;
+
+      li {
+        border-right: 1px solid $gray-lightest;
+        display: flex;
+        align-items: center;
+
+        &:last-child {
+          border-right: none;
+        }
+
+        .icon {
+          margin-bottom: 0.5rem;
+
+          @include f4;
+        }
+
+        a {
+          display: block;
+          text-decoration: none;
+          color: $gray-darker;
+          background-color: transparent;
+          transition: all 0.5s;
+          padding: 0.5rem 0.75rem;
+
+          @include f8;
+          @include uppercase;
+
+          &:hover {
+            background-color: $gray-lightest;
+            transition: all 0.25s;
+          }
+        }
+      }
+    }
+  }
+}

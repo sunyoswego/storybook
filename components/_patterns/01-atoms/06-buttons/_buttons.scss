@@ -1,0 +1,184 @@
+@mixin button(
+  $bg: lighten($near-white, 5%),
+  $color: $oswego-green,
+  $hoverBg: $gray-lightest,
+  $hoverColor: $oswego-green,
+  $border: $oswego-green
+) {
+  display: inline-block;
+  font-weight: 600;
+  font-family: $whitney;
+  @include f7;
+
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  border: 1px solid $border;
+  padding: $space3 $space4;
+  color: $color;
+  background: $bg;
+  margin-right: $space3;
+  text-decoration: none;
+  cursor: pointer;
+
+  @include lh-solid;
+  @include drop;
+  @include rounded;
+
+  &:hover,
+  &:focus {
+    color: $hoverColor;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.25);
+    background: $hoverBg;
+  }
+
+  &:active {
+    box-shadow: none;
+  }
+
+  &:focus {
+    outline: 2px solid $oswego-gold;
+    color: white;
+  }
+}
+
+
+@mixin button-green {
+  @include button($oswego-green, $white, darken($oswego-green, 5%), $white);
+}
+
+@mixin button-white {
+  @include button($white, $oswego-green, #f2f2f2, $oswego-green);
+  &:focus {
+    color: $oswego-green
+  }
+}
+
+@mixin button-gold {
+  @include button(
+    $oswego-gold,
+    $black,
+    darken($oswego-gold, 10%),
+    $black,
+    $border: $oswego-gold
+  );
+  &:focus {
+    color: $black;
+  }
+}
+
+@mixin button-arrow {
+  @include button(transparent, $oswego-green, transparent, $black);
+
+  background-color: transparent;
+  font-size: 0.75rem;
+  color: #235937;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 0.5rem 0;
+  margin-top: 0;
+  margin-right: 1rem;
+  border: none;
+  box-shadow: none;
+  .icon {
+    position: relative;
+    top: 1px;
+    transform: translateX(0);
+    transition: all .5s;
+  }
+
+  &:hover {
+    box-shadow: none;
+    .icon {
+      transform: translateX(2px);
+      transition: all .25s;
+    }
+  }
+
+  &:focus {
+    color: $oswego-green
+  }
+}
+
+button,
+.button {
+  @include button;
+
+  &.btn-green {
+    @include button-green;
+  }
+
+  &.btn-white {
+    @include button-white;
+  }
+
+  &.btn-gold {
+    @include button-gold;
+  }
+
+  &.btn-arrow {
+    @include button-arrow;
+  }
+  
+  &.button--danger {
+    background-color: rgb(229, 149, 149);
+    color: rgb(70, 14, 14);
+  }
+}
+
+@mixin buttontemp {
+  &.btn-white,
+  &.btn-soft {
+    border: 1px solid $oswego-green;
+    color: $oswego-green;
+    background: #fafafa;
+  }
+
+  &.btn-arrow {
+    background-color: transparent;
+    font-size: 0.75rem;
+    color: $oswego-green;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 0.5rem 0;
+    margin-top: 0;
+    margin-right: 1rem;
+    border: none;
+    box-shadow: none;
+
+    &:hover {
+      background-color: transparent !important;
+      color: $dark-gray;
+      transition: all 0.25s;
+      box-shadow: none;
+
+      &::after {
+        color: $dark-gray;
+        right: -0.75rem;
+        transition: all 0.25s;
+      }
+    }
+
+    &::after {
+      position: relative;
+      right: -0.5rem;
+      color: $oswego-green;
+      font-family: "FontAwesome";
+      content: "\F054";
+      transition: all 0.25s;
+    }
+  }
+
+  &.btn-arrow-lg {
+    text-transform: none;
+    font-size: 1rem;
+    font-weight: normal;
+    padding-left: 0;
+    padding-right: 0;
+    box-shadow: none;
+    background: transparent;
+    border: 0;
+    color: $oswego-green;
+    border-bottom: 1px solid $oswego-green;
+    margin-top: 0.5rem;
+  }
+}

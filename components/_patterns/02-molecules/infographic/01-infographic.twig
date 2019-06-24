@@ -1,0 +1,24 @@
+{#
+/**
+ * Available variables:
+ * - infographic_image: Used in place of the big, green numbers
+ * - infographic_statistic: The part in big, green numbers
+ * - infographic_title: The part right underneath the big, green numbers
+ * - infographic_decription: Optional paragraph of text underneath the title.
+ * - infographic_modifiers: Additional classes that add some variation
+ */
+#}
+
+{% set infographic_modifiers = infographic_modifiers|join(" ") %}
+
+<div class="infographic w-100 node node-fast-fact {{ infographic_modifiers }}">
+  {% if (infographic_image) %}
+  <img src="{{ infographic_image }}">
+  {% else %}
+  <div class="infographic-num mb2 tc-og mercury f0 b lh-title">
+    {{ infographic_statistic }}
+  </div>
+  {% endif %}
+  <p class="b mb2 mercury lh-title">{{ infographic_title }}</p>
+  <p>{{ infographic_description }}</p>
+</div>

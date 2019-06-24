@@ -1,0 +1,4 @@
+alert_modifiers: [ "notice", "mini" ]
+icon: "icon-notification2"
+message: "Mollison St is now open"
+message_content: You need to do something

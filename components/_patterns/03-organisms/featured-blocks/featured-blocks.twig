@@ -1,0 +1,10 @@
+ <div class="featured-blocks">
+  {% for card in featured_cards %}
+    {% include "@molecules/card/02-card-featured.twig" with {
+      card_title: card.title,
+      card_img_url: card.href,
+      card_img_src: card.image,
+      card_img_alt: card.alt
+    } %}
+  {% endfor %}
+</div>

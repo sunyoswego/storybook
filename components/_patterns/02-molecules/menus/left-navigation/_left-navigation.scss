@@ -1,0 +1,50 @@
+.left-nav {
+  display: none;
+  position: relative;
+
+
+  @media screen and (min-width: $medium) {
+    display: block;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    border-right: 1px solid #f2f2f2;
+    border-left: 1px solid #f2f2f2;
+
+    ul {
+      padding-left: 1rem;
+      font-size: 0.95em;
+    }
+  }
+
+  li {
+    &.with-sub {
+      ul {
+        display: none;
+      }
+    }
+
+    a {
+      background-color: #fff;
+      border-bottom: 1px solid #f2f2f2;
+      padding: 1rem 2rem;
+      display: block;
+      text-decoration: none;
+      transition: all 0.5s;
+
+      &:hover {
+        padding: 1rem 1.75rem 1rem 2.25rem;
+        background-color: #fafafa;
+        transition: all 0.25s;
+      }
+    }
+
+    &:first-child {
+      a {
+        border-top: 1px solid #f2f2f2;
+      }
+    }
+  }
+}

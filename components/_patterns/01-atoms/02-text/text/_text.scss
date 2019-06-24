@@ -1,0 +1,58 @@
+@mixin paragraph($margin: 0 0 1rem) {
+  margin: #{$margin};
+}
+
+@mixin body-copy {
+  @include f5;
+
+  font-family: $font-body;
+  line-height: 1.75;
+}
+
+html {
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+body {
+  color: black;
+
+  @include body-copy;
+}
+
+p,
+.paragraph {
+  @include paragraph;
+}
+
+.blockquote {
+  font-style: italic;
+  border-left: solid 3px $color-border;
+  margin-left: 1rem;
+  padding-left: 1rem;
+}
+
+.hr {
+  border-style: solid;
+  border-width: 1px 0 0;
+  color: currentColor;
+}
+
+// TODO: BEM selectors should be applied to wysiwyg-created content
+.text-long {
+  p {
+    @extend .paragraph;
+
+    max-width: 120ch;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  blockquote {
+    @extend .blockquote;
+  }
+
+  hr {
+    @extend .hr;
+  }
+}

@@ -1,0 +1,13 @@
+<ul class="sg-icons">
+  {% for item in items %}
+    <li class="tc">
+    {% include "_icon.twig" with {
+      name: item.name
+    } %}
+      
+      <div class="sg-info lh-title mb4">
+        <span>{{item.name}}</span>
+      </div>
+    </li>
+  {% endfor %}
+</ul>

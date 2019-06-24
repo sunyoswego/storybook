@@ -1,0 +1,92 @@
+// These styles are specifically for Pattern Lab.
+// They are not used by the site in any way.
+.pl-template {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.pl,
+.sg-main {
+  .sg-subtype {
+    margin-top: 0 !important;
+  }
+  .sg-subtype h2 {
+    background: $near-white;
+    font-size: 3rem;
+    padding: 2rem 0;
+    margin-top: 0 !important;
+    a {
+      @include wrapper($v-padding: $space);
+
+      display: block;
+      color: $oswego-green;
+      text-decoration: none;
+      line-height: 1;
+      text-transform: capitalize !important;
+    }
+  }
+
+
+  .sg-pattern-extra {
+    border-top: 1px solid #ddd !important;
+    border-bottom: 1px solid #ddd !important;
+    border-radius: 0 !important;
+  }
+
+  .sg-pattern > div {
+    @include wrapper;
+  }
+
+  .sg-pattern-title {
+    color: #738ba3;
+    font-size: 1rem !important;
+    text-transform: capitalize !important;
+
+    a {
+      color: #1169ba !important;
+      font-family: Calibre;
+      font-family: $whitney;
+      font-size: .875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin: 2rem 0 .5rem 0;
+    }
+  }
+
+  .sg-pattern-extra-info {
+    width: 100%;
+  }
+
+  .sg-pattern-extra-code {
+    display: none;
+  }
+
+  .visually-hidden {
+    position: absolute !important;
+    clip: rect(1px, 1px, 1px, 1px);
+    overflow: hidden;
+    height: 1px;
+    width: 1px;
+    word-wrap: normal;
+  }
+
+  .sg-colors,
+  .sg-icons {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      flex: 0 0 100px;
+      margin: 0 0.5rem 1rem;
+    }
+
+    &__sample {
+      display: block;
+      height: 100px;
+      margin-bottom: 0.3em;
+    }
+  }
+}

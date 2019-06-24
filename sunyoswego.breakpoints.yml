@@ -1,0 +1,16 @@
+# Breakpoints - change based on site need
+sunyoswego.extra-small:
+  label: extra-small
+  mediaQuery: 'all and (min-width: 320px)'
+sunyoswego.small:
+  label: small
+  mediaQuery: 'all and (min-width: 480px)'
+sunyoswego.medium:
+  label: medium
+  mediaQuery: 'all and (min-width: 720px)'
+sunyoswego.large:
+  label: large
+  mediaQuery: 'all and (min-width: 920px)'
+sunyoswego.extra-large:
+  label: extra-large
+  mediaQuery: 'all and (min-width: 1300px)'

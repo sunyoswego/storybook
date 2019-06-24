@@ -1,0 +1,20 @@
+{#<div class="alert pa4 full {{ alert_modifiers }}">#}
+  <div {{ bem("alert", (alert_modifiers), alert_blockname) }}>
+
+  <div class="container pl0 pr0 f6">
+    <div class="flex items-center">
+      <div class="tc flex items-center">
+      {% include "@base/global/02-icons/_icon.twig" with {
+      name: icon
+    } %}
+      <h2 class="whitney ttu tracked f6 lh-title tracked-mega">{{ message_title }}</h2>
+      </div>
+      {% if pl %}
+        {{ message_content|raw }}
+      {% else %}
+        {{ message_content }}
+      {% endif %}
+
+    </div>
+  </div>
+</div>

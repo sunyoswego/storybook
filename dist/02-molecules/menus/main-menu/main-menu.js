@@ -1,0 +1,2 @@
+'use strict';(function(){'use strict';var a=document.getElementById('main-nav'),b=document.querySelectorAll('.hamburger');0<b.length&&function forEach(a,b,d){if('[object Object]'===Object.prototype.toString.call(a))for(var f in a)Object.prototype.hasOwnProperty.call(a,f)&&b.call(d,a[f],f,a);else for(var c=0,e=a.length;e>c;c++)b.call(d,a[c],c,a)}(b,function(b){b.addEventListener('click',function(){this.classList.toggle('is-active'),a.classList.toggle('main-nav--open')},!1)})})();
+//# sourceMappingURL=main-menu.js.map

@@ -1,0 +1,57 @@
+//////////////////////////
+// General Variables
+// Note: colors should go into
+// components/_patterns/00-base/global/01-colors/_color-vars.scss
+// and breakpoint related vars into
+// components/_patterns/00-base/_breakpoints.scss
+// Fonts
+
+$whitney: "Whitney SSm A", "Whitney SSm B";
+$mercury: "Mercury SSm A", "Mercury SSm B", serif;
+$font-body: $whitney;
+$font-heading: $mercury;
+// Spacing
+$space: 1rem;
+
+//Space scale
+$space1: $space/4;
+$space2: $space/2;
+$space3: $space;
+$space4: $space*2;
+$space5: $space*4;
+$space6: $space*8;
+$space7: $space*16;
+
+// times
+$space-double: $space * 2;
+$space-triple: $space * 3;
+$space-quadruple: $space * 4;
+$space-quintuple: $space * 5;
+$space-sextuple: $space * 6;
+$space-septuple: $space * 7;
+// divided
+$space-one-half: $space/2;
+$space-one-third: $space/3;
+$space-one-fourth: $space/4;
+$space-one-fifth: $space/5;
+$space-one-sixth: $space/6;
+$space-one-seventh: $space/7;
+$space-one-eighth: $space/8;
+
+$card-width: 420px;
+
+$gutter: 2rem;
+
+
+// Line height values;
+@mixin lh-title {
+  line-height: 1.15;
+}
+
+@mixin lh-solid {
+  line-height: 1;
+}
+
+@mixin lh-copy {
+  line-height: 1.5;
+}

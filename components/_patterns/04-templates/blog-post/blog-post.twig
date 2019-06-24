@@ -1,0 +1,73 @@
+{% embed "@templates/_default.twig" with {
+  sidebar: TRUE,
+  menu_items: header.menu_items,
+  footer_menu_items: footer.menu_items,
+  breadcrumb: defaults.breadcrumb
+} %}
+  {% block page_hero %}
+
+    {% include "@molecules/page-intro/page-intro.twig" with {
+      eyebrow: "Blog category",
+      title: "Blog post template",
+      intro: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Minime vero istorum quidem, inquit. Illud dico, ea, quae dicat, praeclare inter se cohaerere.",
+      author_img_src: "../../images/4x3-shineman",
+      author_img_alt: "test"
+    } %}
+
+  {% endblock %}
+
+  {% block page_content %}
+
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Illa tamen simplicia, vestra versuta. Quid est, quod ab ea absolvi et perfici debeat? Quo modo autem optimum, si bonum praeterea nullum est? Duo Reges: constructio interrete.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Illa tamen simplicia, vestra versuta. Quid est, quod ab ea absolvi et perfici debeat? Quo modo autem optimum, si bonum praeterea nullum est? Duo Reges: constructio interrete.</p>
+  {% include "@atoms/04-images/00-image/figure.twig" with {
+    img_src: "../../images/4x3-shineman.jpg",
+    img_alt: "",
+    img_caption: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non igitur potestis voluptate omnia dirigentes aut tueri aut retinere virtutem. Haec quo modo conveniant, non sane intellego. Pisone in eo gymnasio, quod Ptolomaeum vocatur, unaque nobiscum Q. Quae hic rei publicae vulnera inponebat, eadem ille sanabat. Duo Reges: constructio interrete.",
+    image_figure_base_class: "image-w-caption",
+    image_figure_modifiers: ["full"],
+    responsive_image_base_class: 'picture'
+  }%}
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliter homines, aliter philosophos loqui putas oportere? Quis suae urbis conservatorem Codrum, quis Erechthei filias non maxime laudat? Verum hoc loco sumo verbis his eandem certe vim voluptatis Epicurum nosse quam ceteros. Quis est tam dissimile homini. Quae cum dixisset, finem ille. Duo Reges: constructio interrete. Esse enim quam vellet iniquus iustus poterat inpune. Atqui, inquam, Cato, si istud optinueris, traducas me ad te totum licebit. Quo modo autem optimum, si bonum praeterea nullum est? </p>
+
+  <p>Non enim ipsa genuit hominem, sed accepit a natura inchoatum. Nam si amitti vita beata potest, beata esse non potest. Legimus tamen Diogenem, Antipatrum, Mnesarchum, Panaetium, multos alios in primisque familiarem nostrum Posidonium. Haec para/doca illi, nos admirabilia dicamus. Teneo, inquit, finem illi videri nihil dolere. Iis igitur est difficilius satis facere, qui se Latina scripta dicunt contemnere. Hi curatione adhibita levantur in dies, valet alter plus cotidie, alter videt. Mihi quidem Antiochum, quem audis, satis belle videris attendere. Deinde disputat, quod cuiusque generis animantium statui deceat extremum. Et ille ridens: Video, inquit, quid agas;</p>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliter homines, aliter philosophos loqui putas oportere? Quis suae urbis conservatorem Codrum, quis Erechthei filias non maxime laudat? Verum hoc loco sumo verbis his eandem certe vim voluptatis Epicurum nosse quam ceteros. Quis est tam dissimile homini. Quae cum dixisset, finem ille. Duo Reges: constructio interrete. Esse enim quam vellet iniquus iustus poterat inpune. Atqui, inquam, Cato, si istud optinueris, traducas me ad te totum licebit. Quo modo autem optimum, si bonum praeterea nullum est? </p>
+{% include "@atoms/04-images/00-image/figure.twig" with {
+    img_src: "../../images/4x3-shineman.jpg",
+    img_alt: "",
+    img_caption: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non igitur potestis voluptate omnia dirigentes aut tueri aut retinere virtutem. Haec quo modo conveniant, non sane intellego. Pisone in eo gymnasio, quod Ptolomaeum vocatur, unaque nobiscum Q. Quae hic rei publicae vulnera inponebat, eadem ille sanabat. Duo Reges: constructio interrete.",
+    image_figure_base_class: "image-w-caption",
+    image_figure_modifiers: ["left"],
+    responsive_image_base_class: 'picture'
+  }%}
+  <p>Non enim ipsa genuit hominem, sed accepit a natura inchoatum. Nam si amitti vita beata potest, beata esse non potest. Legimus tamen Diogenem, Antipatrum, Mnesarchum, Panaetium, multos alios in primisque familiarem nostrum Posidonium. Haec para/doca illi, nos admirabilia dicamus. Teneo, inquit, finem illi videri nihil dolere. Iis igitur est difficilius satis facere, qui se Latina scripta dicunt contemnere. Hi curatione adhibita levantur in dies, valet alter plus cotidie, alter videt. Mihi quidem Antiochum, quem audis, satis belle videris attendere. Deinde disputat, quod cuiusque generis animantium statui deceat extremum. Et ille ridens: Video, inquit, quid agas;</p>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliter homines, aliter philosophos loqui putas oportere? Quis suae urbis conservatorem Codrum, quis Erechthei filias non maxime laudat? Verum hoc loco sumo verbis his eandem certe vim voluptatis Epicurum nosse quam ceteros. Quis est tam dissimile homini. Quae cum dixisset, finem ille. Duo Reges: constructio interrete. Esse enim quam vellet iniquus iustus poterat inpune. Atqui, inquam, Cato, si istud optinueris, traducas me ad te totum licebit. Quo modo autem optimum, si bonum praeterea nullum est? </p>
+{% include "@atoms/04-images/00-image/figure.twig" with {
+    img_src: "../../images/4x3-shineman.jpg",
+    img_alt: "",
+    img_caption: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non igitur potestis voluptate omnia dirigentes aut tueri aut retinere virtutem. Haec quo modo conveniant, non sane intellego. Pisone in eo gymnasio, quod Ptolomaeum vocatur, unaque nobiscum Q. Quae hic rei publicae vulnera inponebat, eadem ille sanabat. Duo Reges: constructio interrete.",
+    image_figure_base_class: "image-w-caption",
+    image_figure_modifiers: ["right"],
+    responsive_image_base_class: 'picture'
+  }%}
+  <p>Non enim ipsa genuit hominem, sed accepit a natura inchoatum. Nam si amitti vita beata potest, beata esse non potest. Legimus tamen Diogenem, Antipatrum, Mnesarchum, Panaetium, multos alios in primisque familiarem nostrum Posidonium. Haec para/doca illi, nos admirabilia dicamus. Teneo, inquit, finem illi videri nihil dolere. Iis igitur est difficilius satis facere, qui se Latina scripta dicunt contemnere. Hi curatione adhibita levantur in dies, valet alter plus cotidie, alter videt. Mihi quidem Antiochum, quem audis, satis belle videris attendere. Deinde disputat, quod cuiusque generis animantium statui deceat extremum. Et ille ridens: Video, inquit, quid agas;</p>
+  <p>Non enim ipsa genuit hominem, sed accepit a natura inchoatum. Nam si amitti vita beata potest, beata esse non potest. Legimus tamen Diogenem, Antipatrum, Mnesarchum, Panaetium, multos alios in primisque familiarem nostrum Posidonium. Haec para/doca illi, nos admirabilia dicamus. Teneo, inquit, finem illi videri nihil dolere. Iis igitur est difficilius satis facere, qui se Latina scripta dicunt contemnere. Hi curatione adhibita levantur in dies, valet alter plus cotidie, alter videt. Mihi quidem Antiochum, quem audis, satis belle videris attendere. Deinde disputat, quod cuiusque generis animantium statui deceat extremum. Et ille ridens: Video, inquit, quid agas;</p>
+  <p>Non enim ipsa genuit hominem, sed accepit a natura inchoatum. Nam si amitti vita beata potest, beata esse non potest. Legimus tamen Diogenem, Antipatrum, Mnesarchum, Panaetium, multos alios in primisque familiarem nostrum Posidonium. Haec para/doca illi, nos admirabilia dicamus. Teneo, inquit, finem illi videri nihil dolere. Iis igitur est difficilius satis facere, qui se Latina scripta dicunt contemnere. Hi curatione adhibita levantur in dies, valet alter plus cotidie, alter videt. Mihi quidem Antiochum, quem audis, satis belle videris attendere. Deinde disputat, quod cuiusque generis animantium statui deceat extremum. Et ille ridens: Video, inquit, quid agas;</p>
+  <p>Non enim ipsa genuit hominem, sed accepit a natura inchoatum. Nam si amitti vita beata potest, beata esse non potest. Legimus tamen Diogenem, Antipatrum, Mnesarchum, Panaetium, multos alios in primisque familiarem nostrum Posidonium. Haec para/doca illi, nos admirabilia dicamus. Teneo, inquit, finem illi videri nihil dolere. Iis igitur est difficilius satis facere, qui se Latina scripta dicunt contemnere. Hi curatione adhibita levantur in dies, valet alter plus cotidie, alter videt. Mihi quidem Antiochum, quem audis, satis belle videris attendere. Deinde disputat, quod cuiusque generis animantium statui deceat extremum. Et ille ridens: Video, inquit, quid agas;</p>
+
+  {% endblock %}
+
+  {% block page_sidebar %}
+    {% include "@molecules/menus/left-navigation/left-navigation.twig" %}
+    {% include "@templates/_place-holder.twig" with {
+      "place_holder": "Lower sidebar",
+    } %}
+  {% endblock %}
+
+  {% block full_width %}
+  {% endblock %}
+
+{% endembed %}

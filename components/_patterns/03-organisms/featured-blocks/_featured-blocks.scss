@@ -1,0 +1,19 @@
+@supports (display: grid) {
+  @include small {
+    .featured-blocks {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @include medium {
+    .featured-blocks {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .featured-blocks .featured-block {
+      width: auto;
+      height: auto;
+    }
+  }
+}

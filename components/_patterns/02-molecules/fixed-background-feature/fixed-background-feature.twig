@@ -1,0 +1,22 @@
+{#
+Fields:
+feature_img_url: Path to the image asset (~ hero sized)
+feature_title: Title of the feature
+feature_body: Short body of the feature
+#}
+<section class="fixed-background-feature" style="background-image: url({{feature_img_url}})">
+  <div class="feature-content cont-1300">
+    {% include "@atoms/02-text/00-headings/_heading.twig" with {
+      heading_level: 4,
+      heading: feature_title,
+      heading_base_class: "mercury",
+      heading_modifiers: "mt0 tc-og",
+    }%}
+
+    {% include "@atoms/02-text/text/01-paragraph.twig" with {
+      paragraph_content: feature_body,
+      paragraph_base_class: "lh-copy",
+      paragraph_modifiers: "mt0 tc-og",
+    }%}
+  </div>
+</section>

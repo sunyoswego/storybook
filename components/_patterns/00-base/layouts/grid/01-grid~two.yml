@@ -1,0 +1,13 @@
+grid_label:
+  "2-Column Example"
+items:
+  one: item 1
+  two: item 2
+  three: item 3
+  four: item 4
+  five:
+grid_modifiers:
+  1:
+    columns-2
+  2:
+    "pl"

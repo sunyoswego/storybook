@@ -1,0 +1,9 @@
+.card__grid {
+  @include grid;
+  @include margin;
+}
+
+.grid-item.card {
+  @include grid-item(3);
+}
+

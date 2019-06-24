@@ -1,0 +1,42 @@
+{% embed "@templates/_default.twig" with {
+  menu_items: header.menu_items,
+  footer_menu_items: footer.menu_items,
+} %}
+
+  {% block page_hero %}
+    {% include "@molecules/hero/hero.twig" with {
+      hero_img_alt: "Hero Image Alt Text",
+      hero_img_title: "Hero Image Title",
+      dinger_text: hero.dinger_text,
+      heading: hero.heading_text,
+      description_text: hero.description_text
+    } %}
+  {% endblock %}
+
+  {% block page_content %}
+    {% if site_title %}
+      {% include "@atoms/02-text/00-headings/_heading.twig" with {
+        "heading_level": 1,
+        "heading": "Home",
+        "heading_modifiers": ["margin"],
+      } %}
+    {% endif %}
+
+    <div class="pv5">
+      {% include "@organisms/card-grid/card-grid.twig" with {
+        "grid_blockname": "card",
+        "grid_modifiers": ["divider", "columns-3"]
+      } %}
+    </div>
+
+    <div class="pv5 bg-lg">
+    {% include "@organisms/infographics/01-infographics.twig" with {
+      "grid_blockname": "card"
+    } %}
+    </div>
+    <div class="">
+      {% include "@organisms/featured-blocks/featured-blocks.twig"  %}
+    </div>
+  {% endblock %}
+
+{% endembed %}

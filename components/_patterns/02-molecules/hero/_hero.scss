@@ -1,0 +1,72 @@
+.hero {
+  position: relative;
+  text-align: center;
+  background-color: $gray-darker;
+  overflow: hidden;
+  height: 39vw;
+  min-height: 500px;
+  background-size: cover;
+
+  &__content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    left: 50%;
+    color: white;
+    z-index: 3;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 1rem;
+    h1 {
+      @include f0;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    background: rgba(35,89,55, .2);
+    z-index: 1;
+  }
+
+  img {
+    display: block;
+    margin: auto;
+    z-index: 2;
+    position: relative;
+    opacity: 0.65;
+    min-height: 450px;
+    object-fit: cover;
+  }
+
+  p {
+    margin-top: 0;
+  }
+}
+
+.hero__title {
+  @include f0;
+  @include lh-solid;
+  margin-top: 1rem;
+}
+
+.hero__dinger {
+  position: relative;
+}
+
+.hero__dinger::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  bottom: -3.5rem;
+  margin-bottom: 3rem;
+  background: $oswego-gold;
+}

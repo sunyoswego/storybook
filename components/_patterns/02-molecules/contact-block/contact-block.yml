@@ -1,0 +1,11 @@
+column_1_title: "Office"
+column_1_content: |
+  <h3 class="mt0">Chemistry Department</h3>
+  <p>296 Shineman</p>
+column_2_title: "Contact"
+column_2_content: |
+  <p>Phone: 315.312.3048<br>
+  Email: chem@oswego.edu</p>
+column_3_title: "Third Column"
+column_3_content: |
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non semper, inquam; Tecum optime, deinde etiam cum mediocri amico.</p>

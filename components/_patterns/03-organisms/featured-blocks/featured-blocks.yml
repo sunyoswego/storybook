@@ -1,0 +1,25 @@
+featured_cards:
+  1:
+    title: "Image"
+    image: "//picsum.photos/400/300"
+    href: "#"
+  2:
+    title: "Image"
+    image: "//picsum.photos/400/300"
+    href: "#"
+  3:
+    title: "Image"
+    image: "//picsum.photos/400/300"
+    href: "#"
+  4:
+    title: "Image"
+    image: "//picsum.photos/400/300"
+    href: "#"
+  5:
+    title: "Image"
+    image: "//picsum.photos/400/300"
+    href: "#"
+  6:
+    title: "Image"
+    image: "//picsum.photos/400/300"
+    href: "#"

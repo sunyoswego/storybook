@@ -1,0 +1,4 @@
+button_url: "#"
+button_content: "White button"
+button_modifiers:
+  1: "btn-white"

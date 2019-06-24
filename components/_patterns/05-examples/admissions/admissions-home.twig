@@ -1,0 +1,102 @@
+{% embed "@templates/_default.twig" with {
+  menu_items: header.menu_items,
+  footer_menu_items: footer.menu_items,
+  sidebar: true
+} %}
+
+  {% block page_hero %}
+    {% include "@molecules/hero/hero.twig" with {
+      hero_img_alt: "Hero Image Alt Text",
+      hero_img_title: "",
+      dinger_text: "Go to school here",
+      heading: "Admissions",
+      description_text: "Upstate New York's premier public university"
+    } %}
+  {% endblock %}
+
+  {% block page_sidebar %}
+    {% include "@molecules/menus/left-navigation/left-navigation.twig" %}
+  {% endblock %}
+
+  {% block page_content %}
+
+    {% if site_title %}
+      {% include "@atoms/02-text/00-headings/_heading.twig" with {
+        "heading_level": 1,
+        "heading": "Home",
+        "heading_modifiers": ["margin"],
+      } %}
+    {% endif %}
+
+    <div class="mb5">
+      <p class="f4 yellow-line mb4 pb4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suam denique cuique naturam esse ad vivendum ducem. Optime, inquam. Non est igitur voluptas bonum. <a href='http://loripsum.net/' target='_blank'>Duo Reges: constructio interrete.</a> Hoc enim identidem dicitis, non intellegere nos quam dicatis voluptatem. <a href='http://loripsum.net/' target='_blank'>Cur, nisi quod turpis oratio est?</a></p>
+      {% include "@molecules/cta-block/02-cta-block-multiple.twig" with {
+        "grid_blockname": "card",
+        "grid_modifiers": ["divider", "columns-3"]
+      } %}
+    </div>
+
+  {% endblock %}
+
+  {% block full_width %}
+    <div class="container mv5">
+      <h2 class="tc mb4">What you need to know</h2>
+        {% include "@organisms/card-grid/card-grid.twig" %}
+    </div>
+
+    <div class="mv6 flex">
+      <div class="w-100">{% include "@molecules/infographic/03-infographic-with-video.twig" %}</div>
+      <div class="w-100">{% include "@molecules/infographic/03-infographic-with-video.twig" %}</div>
+      <div class="w-100">{% include "@molecules/infographic/03-infographic-with-video.twig" %}</div>
+    </div>
+    <div class="pv5 container">
+      <h2 class="tc mb4">Admission Deadlines</h2>
+      <div class="grid grid--columns-2">
+        <div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tu quidem reddes; Quid enim de amicitia statueris utilitatis causa expetenda vides. Duo Reges: constructio interrete. Negat enim summo bono afferre incrementum diem. Homines optimi non intellegunt totam rationem everti, si ita res se habeat. Quasi vero, inquit, perpetua oratio rhetorum solum, non etiam philosophorum sit. Nec vero sum nescius esse utilitatem in historia, non modo voluptatem. Nihil minus, contraque illa hereditate dives ob eamque rem laetus. </p>
+          <p>Hinc ceteri particulas arripere conati suam quisque videro voluit afferre sententiam. Ecce aliud simile dissimile. Octavio fuit, cum illam severitatem in eo filio adhibuit, quem in adoptionem D. Ab hoc autem quaedam non melius quam veteres, quaedam omnino relicta. </p>
+        </div>
+        <div>
+          <table>
+            <thead>
+            <tr><th class="w-100">Round</th><th class="w-100">Fall Semseter</th><th class="w-100">Spring Semester</th></tr></thead>
+          <tbody>
+          <tr>
+            <td>what</td><td>what</td><td>what</td>
+          </tr>
+          <tr>
+            <td>what</td><td>what</td><td>what</td>
+          </tr>
+          <tr>
+            <td>what</td><td>what</td><td>what</td>
+          </tr>
+          <tr>
+            <td>what</td><td>what</td><td>what</td>
+          </tr>
+          </tbody></table>
+        </div>
+      </div>
+    </div>
+<div class="pv5 container">
+    {% include "@molecules/small-feature/01-small-feature.twig" with {
+      media: '<img src="//picsum.photos/800/600">',
+      body: "Plorem ipsum dolor sit amet consectetur adipiscing elit illud urgueam non intellegere eum quid sibi dicendum sit cum dolorem summum. Plorem ipsum dolor sit amet consectetur adipiscing elit a hrefhttploripsumnet targetblankquo studio aristophanem putamus aetatem in litteris duxissea et quidem."
+    } %}
+    {% include "@molecules/small-feature/01-small-feature.twig" with {
+      media: '<img src="//picsum.photos/800/600">',
+      body: "Plorem ipsum dolor sit amet consectetur adipiscing elit illud urgueam non intellegere eum quid sibi dicendum sit cum dolorem summum. Plorem ipsum dolor sit amet consectetur adipiscing elit a hrefhttploripsumnet targetblankquo studio aristophanem putamus aetatem in litteris duxissea et quidem.",
+      small_feature_modifiers: "img-right"
+    } %}
+    {% include "@molecules/small-feature/01-small-feature.twig" with {
+      media: '<img src="//picsum.photos/800/600">',
+      body: "Plorem ipsum dolor sit amet consectetur adipiscing elit illud urgueam non intellegere eum quid sibi dicendum sit cum dolorem summum. Plorem ipsum dolor sit amet consectetur adipiscing elit a hrefhttploripsumnet targetblankquo studio aristophanem putamus aetatem in litteris duxissea et quidem."
+    } %}
+    {% include "@molecules/small-feature/01-small-feature.twig" with {
+      media: '<img src="//picsum.photos/800/600">',
+      body: "Plorem ipsum dolor sit amet consectetur adipiscing elit illud urgueam non intellegere eum quid sibi dicendum sit cum dolorem summum. Plorem ipsum dolor sit amet consectetur adipiscing elit a hrefhttploripsumnet targetblankquo studio aristophanem putamus aetatem in litteris duxissea et quidem.",
+      small_feature_modifiers: "img-right"
+    } %}
+</div>
+  {% endblock %}
+
+{% endembed %}

@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the Pattern Lab theme.
+ */
+function sunyoswego_preprocess_page(&$variables) {
+    $route_match = \Drupal::routeMatch();
+    if ($route_match->getRouteName() == 'entity.node.canonical' && isset($variables['node'])) {
+        $node = $variables['node'];
+        $variables['hero_render'] = $node->field_hero->view();
+        $variables['hero_render']['#label_display'] = "hidden";
+    }
+}
+
+function sunyoswego_preprocess_paragraph(&$variables) {
+
+}

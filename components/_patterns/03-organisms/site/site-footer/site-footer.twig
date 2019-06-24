@@ -1,0 +1,49 @@
+<footer class="footer">
+    <div class="container flex">
+        <div class="w-25">
+    {% include "@atoms/04-images/00-image/_image.twig" with {
+        img_src: "../../images/oswego-white.svg",
+        image_base_class: 'logo'
+    } %}
+
+    <p>7060 State Route 104<br>
+    Oswego, NY 13126-3599<br>
+    315.312.2500</p>
+        </div>
+    <div class="flex pa4 w-75">
+        <div class="w-100">
+    <h5 class="ttu f7 whitney tracked footer__links_heading">Campus</h5>
+    <ul class="f6 list footer__links">
+        <li><a href="#">Contact us</a></li>
+        <li><a href="#">Commitment to safety</a></li>
+        <li><a href="#">Library</a></li>
+    </ul>
+        </div>
+        <div class="w-100">
+        <h5 class="ttu f7 whitney tracked footer__links_heading">Resources</h5>
+    <ul class="f6 list footer__links">
+        <li><a href="#">A-Z index</a></li>
+        <li><a href="#">Accessibility</a></li>
+        <li><a href="#">Careers at Oswego</a></li>
+        <li><a href="#">Consumer Information: Student Right to Know</a></li>
+        <li><a href="#">People Search</a></li>
+        <li><a href="#">Report an accessibility issue</a></li>
+    </ul>
+        </div>
+        <div class="w-100">
+        <h5 class="ttu f7 whitney tracked footer__links_heading">More</h5>
+    <ul class="f6 list footer__links">
+        <li><a href="#">Request info</a></li>
+        <li><a href="#">Visit</a></li>
+        <li><a href="#">Apply</a></li>
+        <li><a href="#">About this site</a></li>
+    </ul>
+        </div>
+    </div>
+    </div>
+    {% block footer_content %}
+        {% include "@molecules/menus/inline-menu/inline-menu.twig" with {
+            items: footer_menu_items
+        } %}
+    {% endblock %}
+</footer>

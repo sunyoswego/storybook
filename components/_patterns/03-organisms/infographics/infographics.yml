@@ -1,0 +1,15 @@
+grid_label: "This is a Title"
+grid_blockname: infographic
+infographics:
+  1:
+    infographic_statistic: "8000+"
+    infographic_title: "Infographic title"
+    infographic_description: "Infographic description. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  2:
+    infographic_statistic: "8000+"
+    infographic_title: "Infographic title"
+    infographic_description: "Infographic description. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  3:
+    infographic_statistic: "8000+"
+    infographic_title: "Infographic title"
+    infographic_description: "Infographic description. Lorem ipsum dolor sit amet, consectetur adipiscing elit."

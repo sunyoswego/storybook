@@ -1,0 +1,168 @@
+{{ attach_library('sunyoswego/flickity') }}
+
+{% embed "@templates/_default.twig" with {
+  menu_items: header.menu_items,
+  footer_menu_items: footer.menu_items,
+  breadcrumb: breadcrumb
+} %}
+  {% block page_hero %}
+    {% include "@molecules/hero/hero.twig" %}
+  {% endblock %}
+
+  {% block page_content %}
+  {% include "@molecules/page-intro/page-intro.twig" with {
+    title: false,
+    intro: "Turn your passion into a teaching career. If you hold a bachelor’s degree and would like to become a classroom teacher, the initial teaching certification program prepares you with the skills to channel your interests or past degree into a career in education."
+  } %}
+
+  <h3 class="mt5">Quick facts</h3>
+    <div class="mini-infographics flex mb4">
+      {% include "@molecules/infographic/00-mini-infographic.twig" with {
+        icon_name: "icon-alarm2",
+        mi_title: "Testing titleasd asdasd asdasda",
+        mi_sub_title: "Subtitle, too"
+      } %}
+
+      {% include "@molecules/infographic/00-mini-infographic.twig" with {
+        icon_name: "icon-alarm2",
+        mi_title: "Testing title",
+        mi_sub_title: "Subtitle, too"
+      } %}
+
+      {% include "@molecules/infographic/00-mini-infographic.twig" with {
+        icon_name: "icon-alarm2",
+        mi_title: "Testing title",
+        mi_sub_title: "Subtitle, too"
+      } %}
+
+      {% include "@molecules/infographic/00-mini-infographic.twig" with {
+        icon_name: "icon-alarm2",
+        mi_title: "Testing title",
+        mi_sub_title: "Subtitle, too"
+      } %}
+
+      {% include "@molecules/infographic/00-mini-infographic.twig" with {
+        icon_name: "icon-alarm2",
+        mi_title: "Testing title",
+        mi_sub_title: "Subtitle, too"
+      } %}
+
+      {% include "@molecules/infographic/00-mini-infographic.twig" with {
+        icon_name: "icon-alarm2",
+        mi_title: "Testing title",
+        mi_sub_title: "Subtitle, too"
+      } %}
+    </div>
+    <section class="mv5" data-transition="fadeinup">
+      
+      <div class="flex">
+        <div class="w-100 pr4-ns">
+          <h3>Overview</h3>
+          <p>You will learn how to create meaningful, culturally relevant literacy experiences for all students. This program provides opportunities to tutor in urban, suburban and rural schools, allowing you to develop proficiency in planning, assessment and diagnosis. Learn to engage readers and acknowledge the needs of resistance readers and writers.</p>                                          
+          <h4 class="mt4">Curriculum</h5>
+          <a class="button btn-white" href="#">Master of Science in Teaching</a>
+        </div>
+        <div class="overview-video pl4-ns">
+          {% include "@atoms/04-images/00-image/_image.twig" with {
+            img_src: "../../images/4x3-shineman.jpg",
+            img_alt: "testing alt"
+          } %}
+        </div>
+      </div>
+    </section>
+    <section class="flex-ns mv5" data-transition="fadeinup">
+      <div class="outcomes w-100 pr4-ns">
+        <h3>Outcomes</h3>                
+        <p>SUNY Oswego is dedicated to preparing knowledgeable teachers with strong commitments to equity and diversity, critical thinking, social responsibility and critical reflection. Following completion of the program, candidates are eligible for New York State initial teaching certification.</p>
+      </div>
+      <div class="opportunities w-100 pl4-ns">
+        <h3>Career Opportunities</h3>
+        <ul>
+          <li><p>NYS initial certified teacher for grades 7-12</p></li>
+        </ul>
+      </div>
+    </section>
+    <section class="mv5">
+    <h3>Admissions requirements</h3>
+    {% include "@organisms/accordion/accordion.twig" %}
+    </section>
+  {% endblock %}
+
+  {% block page_sidebar %}
+    {% include "@molecules/menus/left-navigation/left-navigation.twig" %}
+    {% include "@templates/_place-holder.twig" with {
+      "place_holder": "Who to contact",
+    } %}
+  {% endblock %}
+
+  {% block full_width %}
+    {% include "@molecules/fixed-background-feature/fixed-background-feature.twig" with {
+      feature_img_url: "../../images/hero-shineman.jpg",
+      feature_title: "Title of the feature",
+      feature_body: "Short body of the feature"
+    } %}
+    {% include "@molecules/testimonial/01-testimonial.twig" %}
+
+    <section class="pv5">
+      {{ attach_library("sunyoswego/card-carousel") }}
+      <h3 class="tc mv5">Program resources</h3>
+      <div class="resource-cards">
+        {% include "@molecules/card/03-card-resource.twig" with {
+          "card_modifiers": "bg-gr-wave",
+        } %}
+        {% include "@molecules/card/03-card-resource.twig" with {
+          "card_modifiers": "bg-ye",
+        } %}
+        {% include "@molecules/card/03-card-resource.twig" with {
+          "card_modifiers": "bg-gr",
+        } %}
+        {% include "@molecules/card/03-card-resource.twig" with {
+          "card_modifiers": "bg-gr-wave",
+        } %}
+        {% include "@molecules/card/03-card-resource.twig" with {
+          "card_modifiers": "bg-ye",
+        } %}
+        {% include "@molecules/card/03-card-resource.twig" with {
+          "card_modifiers": "bg-gr",
+        } %}
+        {% include "@molecules/card/03-card-resource.twig" with {
+          "card_modifiers": "bg-gr-wave",
+        } %}
+        {% include "@molecules/card/03-card-resource.twig" with {
+          "card_modifiers": "bg-ye",
+        } %}
+        {% include "@molecules/card/03-card-resource.twig" with {
+          "card_modifiers": "bg-gr",
+        } %}
+      </div>
+
+    <style>
+    .flickity-page-dots {
+      display: flex;
+      justify-content: center;
+      
+    }
+    li.dot {
+      cursor: pointer;
+      display: block;
+      height: 10px;
+      width: 10px;
+      background-color: rgba(0,0,0,.5);
+      border-radius: 50%;
+      margin: 0 .5rem;
+    }
+
+    li.dot.is-selected {
+      background-color: rgba(0,0,0,1);
+    }
+    </style>
+    </section>
+    {% include "@templates/_place-holder.twig" with {
+      "place_holder": "Request for information",
+    } %}
+    {% include "@templates/_place-holder.twig" with {
+      "place_holder": "Next steps",
+    } %}
+  {% endblock %}
+
+{% endembed %}

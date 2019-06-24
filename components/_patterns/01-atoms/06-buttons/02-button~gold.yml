@@ -1,0 +1,4 @@
+button_url: "#"
+button_content: "Gold button"
+button_modifiers:
+  1: "btn-gold"

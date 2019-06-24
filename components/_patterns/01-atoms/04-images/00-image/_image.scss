@@ -1,0 +1,60 @@
+@mixin img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+img,
+picture {
+  @include img;
+}
+
+figure {
+  margin: 0; //override normalize
+  max-width: 600px;
+
+  img {
+    @include rounded;
+    @include drop;
+  }
+
+  &.image-w-caption--full {
+    min-width: 100%;
+    img {
+      min-width: 100%;
+    }
+  }
+
+  &.align-left,
+  &.image-w-caption--left {
+    float: left;
+    margin-right: 1rem;
+  }
+
+  &.align-right,
+  &.image-w-caption--right{
+    float: right;
+    margin-left: 1rem;
+  }
+  
+  &.align-center,
+  &.image-w-caption--center {
+    float: none;
+    width: 100%;
+    max-width: none;
+    margin: 3rem 0;
+  
+    img {
+      min-width: 100%;
+    }
+  }
+}
+
+.image-w-caption__caption,
+figcaption {
+  padding: 0.5rem;
+  font-style: italic;
+  color: lighten(black, 40%);
+
+  @include f6;
+}

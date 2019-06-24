@@ -1,0 +1,35 @@
+{% embed "@templates/_default.twig" with {
+  menu_items: header.menu_items,
+  footer_menu_items: footer.menu_items,
+  img_src: defaults.img_src,
+  img_alt: defaults.img_alt,
+  image_base_class: "logo",
+  breadcrumb: defaults.breadcrumb
+} %}
+
+  {% block page_hero %}
+    {% include "@molecules/hero/hero.twig" with {
+      hero_img_src: hero_img_src,
+      hero_img_alt: hero_img_alt,
+      hero_img_title: hero_img_title,
+      image_base_class: "hero",
+      dinger_text: dinger_text,
+      heading_text: heading_text,
+      description_text: description_text
+    } %}
+  {% endblock %}
+
+  {% block page_content %}
+
+    {% include "@templates/_place-holder.twig" with {
+      "place_holder": "Other Content",
+    } %}
+    {% include "@templates/_place-holder.twig" with {
+      "place_holder": "Other Content",
+    } %}
+    {% include "@templates/_place-holder.twig" with {
+      "place_holder": "Other Content",
+    } %}
+  {% endblock %}
+
+{% endembed %}

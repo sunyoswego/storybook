@@ -1,0 +1,39 @@
+global:
+  css:
+    theme:
+      dist/style.css: {}
+      //cloud.typography.com/6053872/7911992/css/fonts.css: {}
+
+flickity:
+  js:
+    node_modules/flickity/dist/flickity.pkgd.js: {}
+  css:
+    theme:
+      node_modules/flickity/dist/flickity.css: {}
+
+main-menu:
+  js:
+    dist/02-molecules/menus/main-menu/main-menu.js: {}
+  dependencies:
+    - core/drupal
+
+card-carousel:
+  js:
+    dist/03-organisms/card-carousel/card-carousel.js: {}
+  dependencies:
+    - sunyoswego/flickity
+
+sprite:
+  js:
+    components/js/svgxuse.min.js: { attributes: { defer: true } }
+
+accordion:
+  js:
+    dist/02-molecules/accordion-item/accordion-item.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+
+tabs:
+  js:
+    dist/02-molecules/menus/tabs/tabs.js: {}

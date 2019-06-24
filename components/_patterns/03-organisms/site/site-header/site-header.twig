@@ -1,0 +1,39 @@
+{% block menu %}
+  {% include "@molecules/menus/main-menu/main-menu.twig" %}
+{% endblock %}
+<header class="header flex justify-between items-center">
+  <div class="header__logo">
+    {% block logo %}
+      {% include "@atoms/04-images/00-image/_image.twig" with {
+        img_src: "../../images/logo.svg"
+      } %}
+    {% endblock %}
+  </div>
+  <div class="">
+    {% block utility_nav %}
+    <ul class="list flex utility-nav">
+      <li><a href="#" class="tc lh-solid">{% include "@base/global/02-icons/_icon.twig" with {
+      name: "icon-envelop2"
+    } %} <span class="db">email</span></a></li>
+      <li><a href="#" class="tc lh-solid">{% include "@base/global/02-icons/_icon.twig" with {
+      name: "icon-book2"
+    } %} <span class="db">blackboard</span></a></li>
+      <li><a href="#" class="tc lh-solid">{% include "@base/global/02-icons/_icon.twig" with {
+      name: "icon-library"
+    } %} <span class="db">myoswego</span></a></li>
+      <li><a href="#" class="tc lh-solid">{% include "@base/global/02-icons/_icon.twig" with {
+      name: "icon-list"
+    } %} <span class="db">a-z index</span></a></li>
+      <li><a href="#" class="tc lh-solid">{% include "@base/global/02-icons/_icon.twig" with {
+      name: "icon-plus3"
+    } %} <span class="db">quick links</span></a></li>
+      <li><a href="#" class="tc lh-solid">{% include "@base/global/02-icons/_icon.twig" with {
+      name: "icon-search2"
+    } %} <span class="db">search</span></a></li>
+    </ul>
+    {% endblock %}
+  </div>
+</header>
+{% block breadcrumb %}
+  {% include "@molecules/menus/breadcrumbs/breadcrumbs.twig" %}
+{% endblock %}

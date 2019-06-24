@@ -1,0 +1,26 @@
+<div class="contact-info-main flex flex-wrap flex-no-wrap-ns pa3">
+  <div class="pa3-ns w-100 w-33-ns">
+    <h4 class="f6 ttu tracked whitney">{{ column_1_title }}</h4>
+    {% if pl %}
+      {{ column_1_content|raw }}
+    {% else %}
+      {{ column_1_content }}
+    {% endif %}
+  </div>
+  <div class="pa3-ns w-100 w-33-ns">
+    <h4 class="f6 ttu tracked whitney">{{ column_2_title }}</h4>
+    {% if pl %}
+      {{ column_2_content|raw }}
+    {% else %}
+      {{ column_2_content }}
+    {% endif %}
+  </div>
+  <div class="pa3-ns w-100 w-33-ns">
+    <h4 class="f6 ttu tracked whitney">{{ column_3_title }}</h4>
+    {% if pl %}
+      {{ column_3_content|raw }}
+    {% else %}
+      {{ column_3_content }}
+    {% endif %}
+  </div>
+</div>

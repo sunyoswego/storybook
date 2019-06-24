@@ -1,0 +1,13 @@
+ {{ attach_library('sunyoswego/accordion') }}
+
+<div class="accordion-container">
+  <div class="accordion-toggle" tabindex="0" style="cursor: pointer;" aria-expanded="false">
+      <div class="accordion-title">{{ dl_term }}</div>
+      {% include "@base/global/02-icons/_icon.twig" with {
+        name: 'icon-arrow-down4'
+      } %}
+  </div>
+  <div class="accordion-content" style="display: none;">
+  {{dl_def}}      
+  </div>
+</div>

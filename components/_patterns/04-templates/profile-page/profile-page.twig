@@ -1,0 +1,52 @@
+{% embed "@templates/_default.twig" with {
+  sidebar: TRUE,
+  menu_items: header.menu_items,
+  footer_menu_items: footer.menu_items,
+  breadcrumb: breadcrumb
+} %}
+  {% block page_hero %}
+    {% include "@molecules/page-intro/page-intro.twig" with {
+      eyebrow: "Staff profile",
+      title: "Person's Name",
+      intro: false
+    } %}
+  {% endblock %}
+
+  {% block page_content %}
+
+
+  <div class="flex pa4 bg-lg mb5">
+    <div class="w-100">
+      <h4>Contact</h4>
+      <p>250 Shineman<br>
+      315.312.2702<br>
+      matthew.baker@oswego.edu
+      </p>
+    </div>
+    <div class="w-100">
+    </div>
+    
+      <img class="profile-pic" src="//placeimg.com/150/200" alt="">
+    
+  </div>
+
+  <h3>Research</h3>
+  <p>My group develops and synthesizes stimuli-responsive materials with applications in:</p>
+  <ul>
+    <li> Recyclable and biodegradable plastics </li>
+    <li> Controlled drug release systems </li>
+    <li> Biomedical or environmental sensors </li>
+  </ul>
+
+  <h3>Conferences</h3>
+  <p>M. Baker and B. Hoyt. "Development and Synthesis of Stimuli-responsive Bond-cleaving Polymers’, Quest SUNY Oswego, April 2017.</p>
+
+  <h3>Education</h3>
+  <p>Ph.D., Pennsylvania State University, State College, 2014</p>
+  {% endblock %}
+
+  {% block page_sidebar %}
+    {% include "@molecules/menus/left-navigation/left-navigation.twig" %}
+  {% endblock %}
+
+{% endembed %}

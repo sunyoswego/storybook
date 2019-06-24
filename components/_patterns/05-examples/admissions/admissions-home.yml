@@ -1,0 +1,37 @@
+video_url: https://player.vimeo.com/video/333969076
+infographic_num: "#1"
+infographic_title: "campus food in central NY"
+infographic_description:
+hero_img_src: //picsum.photos/1920/600
+
+cards:
+  1:
+    card_modifiers:
+      1: "center"
+    card_img_src: "https://placeimg.com/400/200/tech"
+    card_image_output_image_tag: TRUE
+    card_title: "Majors and Minors"
+    card_title_modifiers:
+      1: "no-space"
+    card_link_url: "#"
+    card_body: "Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec rutrum congue leo eget malesuada."
+  2:
+    card_modifiers:
+      1: "center"
+    card_img_src: "https://placeimg.com/400/200/education"
+    card_image_output_image_tag: TRUE
+    card_title: "Tuition and Fees"
+    card_title_modifiers:
+      1: no-space
+    card_link_url: "#"
+    card_body: "Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec rutrum congue leo eget malesuada."
+  3:
+    card_modifiers:
+      1: "center"
+    card_img_src: "https://placeimg.com/400/200/college"
+    card_image_output_image_tag: TRUE
+    card_title: "Scholarships"
+    card_title_modifiers:
+      1: no-space
+    card_link_url: "#"
+    card_body: "Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec rutrum congue leo eget malesuada."

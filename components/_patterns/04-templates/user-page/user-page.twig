@@ -1,0 +1,124 @@
+{% embed "@templates/_default.twig" with {
+  sidebar: TRUE,
+  menu_items: header.menu_items,
+  footer_menu_items: footer.menu_items,
+  breadcrumb: defaults.breadcrumb
+} %}
+  {% block page_hero %}
+  
+  {% if show_hero %}
+    {% include "@molecules/hero/hero.twig" %}
+  {% elseif show_minihero %}
+    {% include "@molecules/hero/mini-hero.twig" %}
+  {% endif %}
+  
+  
+  {% endblock %}
+
+  {% block page_content %}
+  <div class="user-info mt5 flex">
+    <div class="user-info__photo pr4">
+      <img src="//placeimg.com/200/200">
+    </div>
+    <div class="user-info__details">
+      <h2 class="user-info__name">Jonathan Doe</h2>
+      <p>Details go here</p>
+    </div>
+  </div>
+
+    <div class="mv5">
+    <h5 class="f7 ttu tracked whitney">Latest notifications</h5>
+      {% include "@molecules/alert/alert.twig" with {
+        alert_modifiers: ["urgent","mini"],
+        icon: "icon-pacman",
+        icon_modifier: "f4",
+        message_content: "Your bill is due in 20 days"
+      } %}
+      {% include "@molecules/alert/alert.twig" with {
+      alert_modifiers: ["notice","mini"],
+      icon: "icon-warning2",
+      icon_modifier: "f4",
+      message_content: "You can now register for classes"
+    } %}
+    </div>
+
+    <div class="card-container mb5">
+
+      <div class="list-card">
+        <h4 class="ttu tracked whitney f6">Dining menu</h4>
+        <ul>
+          <li><a href="#">Tuscan Bean Soup, Homemade</a></li>
+          <li><a href="#">Chicken Noodle Soup (KC)</a></li>
+          <li><a href="#">Greek Gyro Sandwich</a></li>
+          <li><a href="#">Greek Gyro, no pita</a></li>
+          <li><a href="#">Chicken Quarters (Perdue)</a></li>
+        </ul>
+      </div>
+
+      <div class="list-card">
+        <h4 class="ttu tracked whitney f6">Oswego Today announcements</h4>
+        <ul>
+          <li><a href="#">Students encouraged to 'drop-in' with President Stanley on Wednesday</a></li>
+          <li><a href="#" >College to welcome newest alumni at May 17 Torchlight</a></li>
+          <li><a href="#">Increase in campus mail room services costs to begin Wednesday</a></li>
+{#          <li><a href="#">Students encouraged to 'Leave Green' for community sale</a></li>#}
+{#          <li><a href="#">Oz Internship Showcase set for May 1 </a></li>#}
+        </ul>
+      </div>
+
+      <div class="list-card">
+        <h4 class="ttu tracked whitney f6">SUNY Oswego News</h4>
+        <ul>
+          <li><a href="#">Distinguished speakers to earn honorary degrees at Saturday, May 18, Commencement ceremonies</a></li>
+          <li><a href="#">World Trade Center attack survivor, alumnus, father of graduate to keynote Commencement Eve</a></li>
+          <li><a href="#">Clubs and organizations have a profound impact on our students</a></li>
+{#          <li><a href="#">Illustration-rich artwork to fill new gallery for graduate exhibitions</a></li>#}
+{#          <li><a href="#">Student media organizations show strong teamwork in sports coverage</a></li>#}
+        </ul>
+      </div>
+
+      <div class="list-card">
+        <h4 class="ttu tracked whitney f6">SUNY Oswego Events</h4>
+        <ul>
+          <li><a href="#">Color Oswego</a></li>
+          <li><a href="#">OzFest Concert</a></li>
+          <li><a href="#">Torchlight Ceremony</a></li>
+          {#          <li><a href="#">Illustration-rich artwork to fill new gallery for graduate exhibitions</a></li>#}
+          {#          <li><a href="#">Student media organizations show strong teamwork in sports coverage</a></li>#}
+        </ul>
+      </div>
+
+      <div class="list-card">
+        <h4 class="ttu tracked whitney f6">Campus Bulletin</h4>
+        <ul>
+          <li><a href="#">Tragedy in Sri Lanka</a></li>
+          <li><a href="#">We Stand with New Zealand</a></li>
+          <li><a href="#">All classes cancelled (update 9:50am)</a></li>
+          {#          <li><a href="#">Illustration-rich artwork to fill new gallery for graduate exhibitions</a></li>#}
+          {#          <li><a href="#">Student media organizations show strong teamwork in sports coverage</a></li>#}
+        </ul>
+      </div>
+
+      <div class="list-card">
+        <h4 class="ttu tracked whitney f6">MyDegree</h4>
+        <ul>
+          <li><a href="#">Advisor information</a></li>
+          <li><a href="#">Degree completion status</a></li>
+          <li><a href="#">Senior check form</a></li>
+          {#          <li><a href="#">Illustration-rich artwork to fill new gallery for graduate exhibitions</a></li>#}
+          {#          <li><a href="#">Student media organizations show strong teamwork in sports coverage</a></li>#}
+        </ul>
+      </div>
+
+    </div>
+
+  {% endblock %}
+
+  {% block page_sidebar %}
+    {% include "@molecules/menus/left-navigation/left-navigation.twig" %}
+  {% endblock %}
+
+  {% block full_width %}
+  {% endblock %}
+
+{% endembed %}

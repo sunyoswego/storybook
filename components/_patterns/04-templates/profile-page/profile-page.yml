@@ -1,0 +1,14 @@
+emergency: false
+alert_modifiers: "red"
+left_nav_title: "Department name"
+left_nav_items:
+  - title: "Majors and minors"
+    url: "#"
+  - title: "Facilities"
+    url: "#"
+  - title: "After Oswego"
+    url: "#"
+  - title: "Faculty"
+    url: "#"
+  - title: "Research"
+    url: "#"

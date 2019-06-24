@@ -1,0 +1,22 @@
+# Ignore compiled files.
+# dist
+vendor
+build
+
+# Pattern Lab (ignored initially)
+pattern-lab
+
+# Twig helper functions
+# Commenting out add_attributes and bem.function.php based on
+# **/add_attributes.function.php
+# **/bem.function.php
+**/pl_attach-library.function.php
+
+# NPM
+node_modules
+npm-debug.log
+
+# Git deploy
+.publish
+
+.DS_Store

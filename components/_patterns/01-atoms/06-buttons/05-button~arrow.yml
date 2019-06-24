@@ -1,0 +1,4 @@
+button_url: "#"
+button_content: "Button with arrow"
+button_modifiers:
+  1: "btn-arrow"

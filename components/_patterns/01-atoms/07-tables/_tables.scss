@@ -1,0 +1,83 @@
+$table-gray: #f8f8f8;
+
+.table {
+  border-spacing: 0;
+  width: 100%;
+  background-color: transparent;
+  border-collapse: collapse;
+}
+
+tbody {
+  border-top: 3px solid $gray-lightest;
+}
+
+thead {
+  background-color: $table-gray;
+}
+
+th {
+  @include f6;
+
+  border-bottom: 3px solid $gray-lightest;
+  color: $oswego-green;
+  font-weight: 700;
+  padding: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: left;
+}
+
+tr {
+  border-bottom: 1px solid $gray-lightest;
+
+  &:hover {
+    background-color: #fafafa;
+  }
+}
+
+// .table__row {
+//   &:nth-child(odd) {
+//     background-color: $white;
+//   }
+//   // Non-BEM but always contained
+//   &:last-child {
+//     td:first-child {
+//       border-radius: 0 0 0 5px;
+//     }
+//     td:last-child {
+//       border-radius: 0 0 5px;
+//     }
+//   }
+// }
+.table__cell {
+  padding: 0.5rem;
+}
+
+.table__footer-cell,
+.table__footer-cell:first-child {
+  border-left: none;
+  border-top: 1px solid $gray-lightest;
+}
+
+// TODO: BEM selectors should be applied to wysiwyg-created content
+.text-long {
+  table {
+    @extend .table;
+  }
+
+  th {
+    //@extend .table__heading-cell;
+  }
+
+  td {
+    @extend .table__cell;
+  }
+
+  tbody tr {
+    //@extend .table__row;
+  }
+
+  tfoot th {
+    //@extend .table__footer-cell;
+  }
+}

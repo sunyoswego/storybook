@@ -1,0 +1,37 @@
+.cta-block {
+  padding: 2rem;
+  background: $near-white;
+
+  &__link{
+    @include button;
+  }
+  @include medium {
+    .cta-content {
+
+      padding-right: 2rem;
+    }
+
+    .cta-link {
+      width: 500px;
+      max-width: 100%;
+      text-align: center;
+    }
+  }
+  &-multiple {
+
+  }
+  &-multiple__links {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 1rem;
+    text-align: center;
+    .button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      @include lh-title;
+    }
+  }
+}

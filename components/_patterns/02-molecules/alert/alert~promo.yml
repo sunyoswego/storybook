@@ -1,0 +1,5 @@
+alert_modifiers: [ "promo" ]
+icon: "icon-pacman"
+message: "Donate today"
+message_content: |
+  <p>Lorem ipsum dolor sit amet consectetur adipiscing elit fortasse id optimum sed ubi illud plus semper voluptatis uterque enim summo.</p>

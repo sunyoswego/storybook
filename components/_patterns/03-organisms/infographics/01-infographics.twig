@@ -1,0 +1,12 @@
+{% extends "@base/layouts/grid/00-grid.twig" %}
+{% set grid_modifiers = grid_modifiers|join(" ") %}
+
+{% block grid_content %}
+    {% for infographic in infographics %}
+      {% include "@molecules/infographic/01-infographic.twig" with {
+        infographic_statistic: infographic.infographic_statistic,
+        infographic_title: infographic.infographic_title,
+        infographic_description: infographic.infographic_description
+      } %}
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,35 @@
+{#
+/**
+ * @file
+ * Theme override to display a region.
+ *
+ * Available variables:
+ * - content: The content for this region, typically blocks.
+ * - attributes: HTML attributes for the region div.
+ * - region: The name of the region variable as defined in the theme's
+ *   .info.yml file.
+ *
+ * @see template_preprocess_region()
+ * sunyoswego_main_menu
+ * sunyoswego_search
+ * sunyoswego_breadcrumbs
+
+ */
+#}
+{% extends "@organisms/site/site-header/site-header.twig" %}
+
+{% block menu %}
+  {{ elements.mainnavigation }}
+{% endblock %}
+
+{% block breadcrumb %}
+  {{ elements.sunyoswego_breadcrumbs }}
+{% endblock %}
+
+{% block logo %}
+  {{ elements.sunyoswego_branding }}
+{% endblock %}
+
+{% block utility_nav %}
+  {{ elements.utilitynav }}
+{% endblock %}

@@ -40,4 +40,5 @@
 {% include "@molecules/small-feature/01-small-feature.twig" with {
   media: content.field_media,
   body: content.field_accompanying_text,
+  small_feature_modifiers: content.field_small_feature_variations.0['#markup']
 } %}

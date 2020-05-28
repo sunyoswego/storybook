@@ -1,0 +1,24 @@
+p.page-intro {
+  @include f4;
+
+  padding-bottom: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  font-family: $mercury;
+  color: lighten(#2f2f2f, 5%);
+  font-weight: 300;
+  border-bottom: 1px solid #f6f6f6;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 4px;
+    width: 150px;
+    background: $oswego-gold;
+  }
+}
+
+

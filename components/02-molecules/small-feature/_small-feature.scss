@@ -1,0 +1,133 @@
+.small-feature {
+  display: flex;
+  align-items: start;
+  max-width: 1300px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  h1,h2,h3,h4,h5,h6 {
+    margin-top: 0;
+    position: relative;
+    //margin-bottom: .5rem;
+    //padding-bottom: .5rem;
+    //&::after {
+    //  content: "";
+    //  position: absolute;
+    //  left: 0;
+    //  width: 50px;
+    //  height: 4px;
+    //  bottom: .5rem;
+    //  background: #fc3;
+    //}
+  }
+
+  &.right {
+    justify-content: flex-end;
+  }
+
+  &.has-media {
+    img {
+      @include rounded;
+      @include drop;
+    }
+
+    .the-media {
+      width: 33.33%;
+      padding-right: $space;
+    }
+
+    .media-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      @include rounded;
+      @include drop;
+
+      overflow: hidden;
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .small-feature__content {
+      width: 66.67%;
+      padding-left: $space;
+    }
+
+    &.img-right {
+      flex-direction: row-reverse;
+
+      .the-media {
+        padding-right: 0;
+        padding-left: $space;
+      }
+
+      .small-feature__content {
+        padding-left: 0;
+        padding-right: $space;
+      }
+    }
+
+    &.half-img-right {
+      flex-direction: row-reverse;
+
+      .the-media {
+        padding-right: 0;
+        padding-left: $space;
+      }
+
+      .small-feature__content {
+        padding-left: 0;
+        padding-right: $space;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      .the-media,
+      .small-feature__content {
+        width: 50%;
+      }
+    }
+
+    &.half {
+      .the-media {
+        img {
+          width: 100%;
+        }
+      }
+
+      .the-media,
+      .small-feature__content {
+        width: 50%;
+      }
+    }
+  }
+
+  @media screen and (max-width: $medium) {
+    flex-wrap: wrap;
+
+    .small-feature__content,
+    .the-media {
+      padding: 0 !important;
+      flex-basis: 100%;
+    }
+
+    .the-media {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.basic-page-main-region {
+  .small-feature {
+    margin: 2rem auto;
+  }
+}

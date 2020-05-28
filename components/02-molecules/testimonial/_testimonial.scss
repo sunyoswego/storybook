@@ -1,0 +1,184 @@
+.bg-gr,
+.br-gr-wave {
+  .spotlight-name {
+    color: $oswego-gold !important;
+  }
+  .testimonials {
+    &::before {
+      color: rgba(20, 64, 35, 1);
+      background: rgba(46, 96, 65, 1);
+    }
+  }
+}
+
+.bg-ye {
+  .testimonials {
+    &::before {
+      color: #000;
+      background: darken($oswego-gold, 10%)
+    }
+  }
+}
+
+.testimonials {
+  position: relative;
+  //margin-top: 45px;
+
+  .spotlight-testimonial {
+    width: 1300px;
+    max-width: 100%;
+  }
+
+  .btn-arrow {
+    margin-left: 0;
+  }
+  // This is the quotation "icon" at the top of the testimonial
+  &::before {
+    position: absolute;
+    content: "\201C";
+    font-size: 5rem;
+    line-height: 1.6;
+    font-weight: 900;
+    text-align: center;
+    border-radius: 50%;
+    font-family: $mercury;
+    background-color: $gray-lightest;
+    color: $gray;
+    height: 90px;
+    width: 90px;
+    top: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 3px 25px rgba(0, 0, 0, 0.16);
+  }
+
+  .spotlight-content {
+    img {
+      box-shadow: 0 3px 25px rgba(0, 0, 0, 0.16);
+      border-radius: 3px;
+      margin: auto;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .spotlight-quote {
+      p {
+        @include f5;
+
+        margin-top: 0;
+        font-family: $mercury;
+        font-weight: bold;
+        line-height: 1.5;
+        max-width: 800px;
+      }
+    }
+
+    .spotlight-byline {
+      .spotlight-name {
+        margin-bottom: 0;
+        color: $oswego-green;
+        font-weight: 600;
+        padding-top: 0.5rem;
+        font-family: $whitney;
+        @include f5;
+      }
+
+      .spotlight-major {
+        @include f7;
+
+        margin-bottom: 0;
+        text-transform: uppercase;
+        font-weight: normal;
+        font-family: $whitney;
+      }
+    }
+  }
+  @include small {
+    padding: calc(45px + 4rem) 2rem 4rem 2rem;
+
+    .spotlight-content {
+      max-width: 400px;
+      margin: auto;
+
+      img {
+        min-width: auto;
+        margin-bottom: 2rem;
+      }
+
+      .spotlight-quote {
+        padding: 0;
+
+        & > p {
+          @include f5;
+
+          margin-top: 0;
+          font-family: $mercury;
+          font-weight: bold;
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+  @include medium {
+    &.smaller-text {
+      .program-spotlight {
+        max-width: 1000px;
+        width: 100%;
+      }
+
+      .spotlight-content .spotlight-quote.no-image {
+        width: 60%;
+      }
+    }
+
+    .spotlight-content {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      max-width: $large;
+
+      img {
+        max-width: none;
+        width: 48%;
+        margin: 0;
+        margin-right: $gutter;
+      }
+
+      .spotlight-quote {
+        //padding-left: $gutter;
+        width: 52%;
+
+        &.no-image {
+          width: 75%;
+        }
+
+        p {
+          @include f4;
+
+          text-align: left;
+          max-width: none;
+        }
+      }
+    }
+  }
+  @include large {
+    padding: 7rem 4rem;
+
+    &::before {
+      line-height: 1.5;
+    }
+
+    .spotlight-quote {
+      p {
+        @include f3;
+      }
+    }
+  }
+  .flickity-page-dots {
+    left: 0;
+    bottom: 2rem !important;
+  }
+}
+
+

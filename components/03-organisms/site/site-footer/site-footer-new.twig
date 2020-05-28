@@ -1,0 +1,85 @@
+<footer class="footer">
+    <div id="cta-links">
+        <div class="container mb4">
+            <div class="grid grid--3 tc">
+                <a class="button btn-white" href="https://www.oswego.edu/admissions/request-information">Request info</a>
+                <a class="button btn-white" href="https://www.oswego.edu/admissions/plan-your-visit">Visit</a>
+                <a class="button btn-white" href="https://www.oswego.edu/admissions/apply">Apply</a>
+            </div>
+        </div>
+    </div>
+    <div class="container footer__container">
+        <div class="w-40-ns pr4-ns">
+            {% include "@atoms/04-images/00-image/_image.twig" with {
+                img_src: "https://ww1.oswego.edu/themes/custom/sunyoswego/images/oswego-white.svg",
+                image_base_class: 'logo',
+                img_alt: "SUNY Oswego logo"
+            } %}
+
+            <p class="pl4-ns pt3">7060 State Route 104<br>
+            Oswego, NY 13126-3599<br>
+            315.312.2500</p>
+        </div>
+        <div class="footer__links-container relative">
+            <div class="footer__links-column">
+                <h5 class="ttu f7 whitney tracked footer__links_heading">Campus</h5>
+                <hr class="columns-line">
+                <ul class="f6 list footer__links">
+                    <li><a href="https://www.oswego.edu/about/contact-us">Contact us</a></li>
+                    <li><a href="https://www.oswego.edu/safety-on-campus">Commitment to safety</a></li>
+                    <li><a href="https://www.oswego.edu/library">Library</a></li>
+                </ul>
+            </div>
+            <div class="footer__links-column">
+                <h5 class="ttu f7 whitney tracked footer__links_heading">Resources</h5>
+                <ul class="f6 list footer__links">
+                    <li><a href="https://www.oswego.edu/about/index/">A-Z index</a></li>
+                    <li><a href="https://www.oswego.edu/accessibility">Accessibility</a></li>
+                    <li><a href="https://www.oswego.edu/human-resources/your-opportunity-awaits/">Careers at Oswego</a></li>
+                    <li><a href="https://www.oswego.edu/institutional-research/consumer-information">Consumer Information: Student Right to Know</a></li>
+                    <li><a href="https://www.oswego.edu/people-search/">People Search</a></li>
+
+                </ul>
+            </div>
+            <div class="footer__links-column">
+                <h5 class="ttu f7 whitney tracked footer__links_heading">More</h5>
+                <ul class="f6 list footer__links">
+                    <li><a href="https://sunyoswego.formstack.com/forms/report_accessibility_issue?field57188949=https://www.oswego.edu/">Report an accessibility issue</a></li>
+                    <li><a href="https://www.oswego.edu/about/about-site">About this site</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container"><hr class="mb4 mt5"></div>
+    <div class="container flex justify-between">
+
+        <div class="social-icons pl3">
+            <a target="_blank" href="https://www.facebook.com/SUNYOswego">
+            {% include "@base/global/02-icons/_icon.twig" with {
+                name: "icon-facebook2",
+                icon_modifier: "mr3"
+            } %}
+            </a>
+            <a target="_blank" href="https://www.instagram.com/SUNYOswego">
+            {% include "@base/global/02-icons/_icon.twig" with {
+                name: "icon-instagram",
+                icon_modifier: "mr3"
+            } %}
+            </a>
+            <a target="_blank" href="https://www.twitter.com/SUNYOswego">
+            {% include "@base/global/02-icons/_icon.twig" with {
+                name: "icon-twitter",
+                icon_modifier: "mr3"
+            } %}
+            </a>
+            <a target="_blank" href="https://www.youtube.com/SUNYOswegovideo">
+            {% include "@base/global/02-icons/_icon.twig" with {
+                name: "icon-youtube",
+                icon_modifier: "mr3"
+            } %}
+            </a>
+
+        </div>
+        <p class="f6 pr3">© State University of New York at Oswego</p>
+    </div>
+</footer>

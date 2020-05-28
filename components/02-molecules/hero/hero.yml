@@ -1,0 +1,6 @@
+mini_hero_img_src: "//picsum.photos/1920/480"
+hero_media: "<img src=\"//picsum.photos/1920/768\">"
+image_base_class: "hero"
+heading: "This is the heading text"
+dinger_text: "This is the dinger text"
+description_text: "This is the description"

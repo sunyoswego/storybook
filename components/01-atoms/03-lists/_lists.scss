@@ -1,0 +1,51 @@
+/// Mixin - list-reset
+/// Reset list item defaults when no margin, padding, list styles needed
+@mixin list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  padding-left: 1em;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+.list-item {
+  margin-bottom: 0.5rem;
+  //padding-left: 1em;
+}
+
+main,
+footer {
+  li {
+    @extend .list-item;
+  }
+}
+
+.left-navigation li {
+  margin-bottom: 0;
+}
+
+  // TODO: BEM selectors should be applied to wysiwyg-created content
+
+.text-long {
+  ol,
+  ul {
+    li {
+      @extend .list-item;
+      p:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+

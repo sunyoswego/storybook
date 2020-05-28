@@ -12,9 +12,7 @@
 #}
 
 {% include "@atoms/04-images/00-image/_image.twig" with {
-  img_url: "/",
   img_src: attributes.src,
   img_alt: attributes.alt,
-  image_blockname: "logo",
-  image_link_base_class: "logo",
+  image_modifiers: [style_name],
 } %}

@@ -3,36 +3,104 @@ global:
     theme:
       dist/style.css: {}
       //cloud.typography.com/6053872/7911992/css/fonts.css: {}
+  dependencies:
+    - sunyoswego/gsap
+    - sunyoswego/jscookie
+
+stickysidebar:
+  js:
+    js/stickysidebar.js: {}
+
+news-feed:
+  js:
+    dist/js/03-organisms/news-feed/news-feed.js: {}
+  dependencies:
+      - core/jquery
+
+jscookie:
+  js:
+    js/js.cookie.js: {}
+
+gsap:
+  js:
+    https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.4/gsap.min.js: { type: external }
 
 flickity:
   js:
-    node_modules/flickity/dist/flickity.pkgd.js: {}
+    libraries/flickity/flickity.pkgd.js: {}
   css:
     theme:
-      node_modules/flickity/dist/flickity.css: {}
+      libraries/flickity/flickity.css: {}
+
+vimeo:
+  js:
+    https://player.vimeo.com/api/player.js: {}
+
+hero:
+  js:
+    dist/js/02-molecules/hero/hero.js: {}
+  dependencies:
+    - core/jquery
+    - sunyoswego/vimeo
 
 main-menu:
   js:
-    dist/02-molecules/menus/main-menu/main-menu.js: {}
+    dist/js/02-molecules/menus/main-menu/main-menu.js: {}
   dependencies:
     - core/drupal
+    - core/jquery
 
-card-carousel:
+left-navigation:
   js:
-    dist/03-organisms/card-carousel/card-carousel.js: {}
+    dist/js/02-molecules/menus/left-navigation/left-navigation.js: {}
   dependencies:
+    - core/drupal
+    - core/jquery
+
+imagesloaded:
+  js:
+    libraries/imagesloaded/imagesloaded.pkgd.js: {}
+
+testimonial_carousel:
+  js:
+    dist/js/03-organisms/testimonial-carousel/testimonial-carousel.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - sunyoswego/imagesloaded
+    - sunyoswego/flickity
+
+gallery:
+  js:
+    dist/js/03-organisms/gallery/gallery.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - sunyoswego/imagesloaded
     - sunyoswego/flickity
 
 sprite:
   js:
-    components/js/svgxuse.min.js: { attributes: { defer: true } }
+    js/svgxuse.min.js: { attributes: { defer: true } }
 
 accordion:
   js:
-    dist/02-molecules/accordion-item/accordion-item.js: {}
+    dist/js/02-molecules/accordion-item/accordion-item.js: {}
   dependencies:
     - core/drupal
     - core/jquery
+
+#small-feature:
+#  js:
+#    dist/02-molecules/small-feature/small-feature.js: {}
+#  dependencies:
+#    - sunyoswego/fitvids
+#
+#fitvids:
+#  js:
+#    libraries/fitvids/fitvids.js: {}
+#  dependencies:
+#    - core/jquery
 
 tabs:
   js:

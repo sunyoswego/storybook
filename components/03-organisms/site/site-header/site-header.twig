@@ -1,0 +1,45 @@
+{% block menu %}
+  {% include "@molecules/menus/main-menu/main-menu.twig" %}
+{% endblock %}
+
+<header class="header flex justify-between items-center">
+  <div class="header__logo">
+    {% block logo %}
+      {% include "@atoms/04-images/00-image/_image.twig" with {
+        img_src: "logo.svg"
+      } %}
+    {% endblock %}
+  </div>
+
+  <div class="">
+    {% block utility_nav %}
+    <ul class="list flex utility-nav">
+      <li><a href="https://accounts.google.com/ServiceLogin?service=mail&continue=https://mail.google.com/mail/&hl=en&hd=oswego.edu" class="tc lh-solid">{% include "@base/global/02-icons/_icon.twig" with {
+      name: "icon-envelop2"
+    } %} <span class="db">email</span></a></li>
+      <li><a href="https://oswego.open.suny.edu/" class="tc lh-solid">{% include "@base/global/02-icons/_icon.twig" with {
+      name: "icon-book2"
+    } %} <span class="db">blackboard</span></a></li>
+      <li><a href="https://www.oswego.edu/myoswego" class="tc lh-solid">{% include "@base/global/02-icons/_icon.twig" with {
+      name: "icon-library"
+    } %} <span class="db">myoswego</span></a></li>
+      <li><a href="https://www.oswego.edu/about/index" class="tc lh-solid">{% include "@base/global/02-icons/_icon.twig" with {
+      name: "icon-list"
+    } %} <span class="db">a-z index</span></a></li>
+      <li><a href="https://www.oswego.edu/popular-links" class="tc lh-solid">{% include "@base/global/02-icons/_icon.twig" with {
+      name: "icon-plus3"
+    } %} <span class="db">quick links</span></a></li>
+      <li><a href="https://www.oswego.edu/google_search.html" class="tc lh-solid">{% include "@base/global/02-icons/_icon.twig" with {
+      name: "icon-search2"
+    } %} <span class="db">search</span></a></li>
+    </ul>
+    {% endblock %}
+  </div>
+
+
+  <button class="hamburger hamburger--spin" type="button">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+  </button>
+</header>

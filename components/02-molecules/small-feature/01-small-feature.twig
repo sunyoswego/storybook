@@ -1,0 +1,12 @@
+{% if media.0 is defined or storybook %}
+  <div class="small-feature mv4 has-media {{ small_feature_modifiers }}" {{attributes}}>
+    <div class="the-media">
+      {{ media }}
+    </div>
+    <div class="small-feature__content">
+      {{ body }}
+    </div>
+  </div>
+{% else %}
+  {{ body }}
+{% endif %}

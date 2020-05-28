@@ -1,0 +1,11 @@
+ {{ attach_library('sunyoswego/accordion') }} 
+
+  {% for dl_item in accordion_list %}
+    {% include "@molecules/accordion-item/accordion-item.twig" with {
+      "dl_term": dl_item.dl_term,
+      "dl_def": dl_item.dl_def,
+      "dl_term_modifiers": dl_item.dl_term_modifiers,
+      "dl_def_modifiers": dl_item.dl_def_modifiers
+    } %}
+  {% endfor %}
+

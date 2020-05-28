@@ -1,0 +1,130 @@
+//
+// General Layout
+//
+$sidebar-width: 400px;
+$main-width: calc(100% - (#{$sidebar-width} + #{$gutter}));
+
+.header {
+  @include wrapper;
+
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+
+.wrapper {
+  @include wrapper;
+}
+
+//
+// Layout Using Flexbox (IE11+).
+// Remove this and uncomment Grid code below to use CSS Grid.
+//
+.main {
+  max-width: $xl; // 1300px
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
+  padding: 0 1rem;
+
+  &--with-sidebar {
+    @media screen and (min-width: $large) {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      grid-gap: 2rem;
+      padding: 0 2rem;
+      margin-top: 2rem;
+    }
+    @media screen and (min-width: $large) {
+      display: grid;
+      grid-template-columns: 1fr 400px;
+      grid-gap: 2rem;
+    }
+  }
+
+  &-content--with-sidebar {
+    padding-left: $gutter;
+    padding-right: $gutter;
+  }
+}
+
+
+.main .main-content {
+  padding: 0 2rem;
+}
+
+.main.main--with-sidebar .main-content {
+  padding: 0;
+}
+
+.main-sidebar {
+  margin-bottom: $space-double;
+}
+
+.field-content {
+  margin-top: 0;
+  margin-bottom: 4rem;
+}
+
+.left-nav {
+  margin-bottom: 0;
+}
+
+.field-full-width-content > * {
+  @include wrapper($max-width, 0, 0, $gutter, $gutter * 2);
+}
+
+.field-full-width-content {
+  & > .content {
+    max-width: 800px;
+    margin: auto;
+
+    &.cont-1300 {
+      max-width: 1300px;
+    }
+
+    &.full-width {
+      max-width: 100%;
+    }
+  }
+}
+
+.field-full-width-content > .spotlight-testimonial {
+  max-width: 100%;
+  margin: -4rem 0;
+}
+
+.field-full-width-content > .gallery {
+  max-width: 100%;
+}
+
+//
+// Layout Using CSS Grid (NO IE11 support)
+// Remove Flexbox code above and uncomment this section to use CSS Grid.
+//
+// .main {
+//   &--with-sidebar {
+//     @include large {
+//       display: grid;
+//       grid-gap: $gutter;
+//       grid-template-areas: "content sidebar";
+//       grid-template-columns: $main-width #{$sidebar-width};
+//     }
+//   }
+// }
+//
+// .main-sidebar {
+//   grid-area: sidebar;
+//   margin-bottom: $space-double;
+// }
+//
+// .main-content {
+//   grid-area: content;
+//   width: 100%;
+// }
+
+.text-long > :first-child {
+  margin-top: 0;
+}

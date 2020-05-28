@@ -44,7 +44,30 @@
  */
 #}
 
-{% include "@pages/_page.twig" with {
-  hero: file_url(node.field_hero_image.entity.fileuri),
-  heading_text: node.title.value
-} %}
+{% extends "@pages/_page.twig" %}
+
+{% block page_hero %}
+  {{ page.hero_render }}
+{% endblock %}
+
+{% block breadcrumb %}
+
+  {% include "@molecules/menus/breadcrumbs/breadcrumbs.twig" %}
+{% endblock %}
+
+{% block title %}
+  {{ page.title.breadcrumbs }}
+  {% if not page.hero_render.0 %}
+    <div class="container mt4">
+    {% include "@atoms/02-text/00-headings/_heading.twig" with {
+      heading: page['#title'],
+      heading_level: 1,
+      heading_base_class: "page-title"
+    } %}
+    </div>
+  {% endif %}
+{% endblock %}
+
+{% block page_content %}
+  {{ page.content }}
+{% endblock %}

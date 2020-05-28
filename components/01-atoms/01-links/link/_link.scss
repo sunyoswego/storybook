@@ -1,0 +1,24 @@
+/// Link
+@mixin link {
+  color: $color-link;
+
+  &:hover {
+    color: $color-link--hover;
+  }
+}
+
+a,
+.link {
+  @include link;
+}
+
+.bg-gr,
+.bg-gr-wave {
+  a,
+  .link {
+    color: $oswego-gold;
+    &:hover {
+      color: white;
+    }
+  }
+}

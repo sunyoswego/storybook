@@ -19,17 +19,13 @@
 {% extends "@organisms/site/site-header/site-header.twig" %}
 
 {% block menu %}
-  {{ elements.mainnavigation }}
-{% endblock %}
-
-{% block breadcrumb %}
-  {{ elements.sunyoswego_breadcrumbs }}
+  {% include "@molecules/menus/main-menu/main-menu.twig" %}
 {% endblock %}
 
 {% block logo %}
   {{ elements.sunyoswego_branding }}
 {% endblock %}
 
-{% block utility_nav %}
-  {{ elements.utilitynav }}
-{% endblock %}
+{#{% block utility_nav %}#}
+{#  {{ elements.utilitynavigation }}#}
+{#{% endblock %}#}

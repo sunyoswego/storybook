@@ -1,0 +1,9 @@
+{{ attach_library("sunyoswego/left-navigation") }}
+<div class="left-nav">
+    <button id="toggle-sidebar-nav">{{ left_nav_title }} Menu</button>
+  {% include "@molecules/menus/_menu.twig" with {
+    menu_class: "left-navigation",
+    items: left_nav_items
+  } %}  
+</div>
+ 

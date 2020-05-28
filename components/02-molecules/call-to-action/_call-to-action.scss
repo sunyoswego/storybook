@@ -1,0 +1,51 @@
+.cta {
+  margin: auto;
+
+  @include medium {
+    &__content {
+      width: 75%;
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        &:first-child {
+          margin-top: 0;
+          padding-top: 0;
+        }
+      }
+      p {
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      padding-right: 2rem;
+    }
+
+    &__link {
+      width: 25%;
+      margin-top: 1.5rem;
+      max-width: 100%;
+      text-align: center;
+      & a {
+        width: 100%;
+      }
+    }
+  }
+  &-multiple__links {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 1rem;
+    text-align: center;
+    width: 100%;
+    .button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      @include lh-title;
+    }
+  }
+}

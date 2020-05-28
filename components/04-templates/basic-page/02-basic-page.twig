@@ -1,0 +1,45 @@
+{% embed "@templates/_default.twig" with {
+  sidebar: TRUE,
+  menu_items: header.menu_items,
+  footer_menu_items: footer.menu_items,
+  breadcrumb: breadcrumb
+} %}
+
+  {% block page_hero %}
+    {% if show_hero %}
+      {% include "@molecules/hero/hero.twig" %}
+    {% else %}
+      <div class="container">
+        {% include "@atoms/02-text/00-headings/_heading.twig" with {
+          heading_level: 1,
+          title: "Basic page template",
+          heading_base_class: "page-title"
+        } %}
+      </div>
+
+    {% endif %}
+  {% endblock %}
+
+  {% block page_content %}
+    {% include "@molecules/page-intro/page-intro.twig" with {
+      intro: intro
+    } %}
+    {% include "@templates/_place-holder.twig" with {
+      "place_holder": "Main content",
+    } %}
+  {% endblock %}
+
+  {% block page_sidebar %}
+    {% include "@molecules/menus/left-navigation/left-navigation.twig" %}
+    {% include "@templates/_place-holder.twig" with {
+      "place_holder": "Lower sidebar",
+    } %}
+  {% endblock %}
+
+  {% block full_width %}
+    {% include "@templates/_place-holder.twig" with {
+      "place_holder": "Full width",
+    } %}
+  {% endblock %}
+
+{% endembed %}

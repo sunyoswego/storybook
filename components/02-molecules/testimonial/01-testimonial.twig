@@ -1,0 +1,32 @@
+{#
+/*
+ * Available variables
+ * - photo: A picture of the person who said the testimonial (4x3)
+ * - quote: The content of the testimonial quote
+ * - name: Name of the person who said it
+ * - sub_title: Sub-title to their name (could be major, title, etc)
+ * - modifiers: Classes that produce variants of the component
+ */
+#}
+
+<div class="spotlight-testimonial">
+  <div class="program-spotlight cont-1300">
+    <div class="spotlight-content">
+      {% if img_src != "/" %}
+        {% include "@atoms/04-images/00-image/_image.twig" with {
+          img_src: testimonial_img_src,
+          img_alt: "",
+          img_title: "",
+          image_base_class: "testimonial"
+        } %}
+      {% endif %}
+      <div class="spotlight-quote">
+        <p>{{ testimonial_quote }}</p>
+        <div class="spotlight-byline">
+          <p class="spotlight-name">{{ testimonial_name }}</p>
+          <p class="spotlight-major ttu tracked">{{ testimonial_sub_title }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

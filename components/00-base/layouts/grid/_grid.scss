@@ -1,0 +1,48 @@
+@mixin grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  grid-gap: 2rem;
+  @supports (display: grid) {
+    display: grid;
+    @media screen and (min-width: $large) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    &.full-width-no-gutter {
+      max-width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+      grid-gap: 0;
+    }
+  }
+}
+
+.grid {
+  @include grid;
+  &.grid--columns-2 {
+    @supports (display: grid) {
+      @media screen and (min-width: $medium) {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  }
+  &.grid--columns-3 {
+    @supports (display: grid) {
+      @media screen and (min-width: $medium) {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
+  }
+  &.grid--columns-4 {
+    @supports (display: grid) {
+      @media screen and (min-width: $medium) {
+        grid-template-columns: 1fr 1fr;
+      }
+      @media screen and (min-width: $large) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+    }
+  }
+}
+

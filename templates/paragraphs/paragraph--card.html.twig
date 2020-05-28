@@ -36,12 +36,18 @@
  * @ingroup themeable
  */
 #}
+{% set card_img_src = file_url(paragraph.field_media.entity.field_media_image.entity.fileuri) %}
+
+{% if card_img_src == "/" %}
+    {% set card_img_src = none %}
+{% endif %}
 
 {% include "@molecules/card/01-card.twig" with {
-    card_img_src: file_url(paragraph.field_media.entity.field_media_image.entity.fileuri),
+    card_img_src: card_img_src,
     card_title: content.field_title,
     card_subtitle: content.field_subtitle,
     card_body: content.field_accompanying_text,
     card_link_text: content.field_link.0['#title'],
-    card_link_url: content.field_link.0['#url']
+    card_link_url: content.field_link.0['#url'],
+    card_img_url: content.field_link.0['#url']
 } %}

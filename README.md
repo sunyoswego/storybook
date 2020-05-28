@@ -1,87 +1,35 @@
+<img src="./hero.png" />
+
 [![Four Kitchens](https://img.shields.io/badge/4K-Four%20Kitchens-35AA4E.svg)](https://fourkitchens.com/)
 
-# SUNYOswego: Pattern Lab + Drupal 8
+<h4 align="center">Storybook development + Webpack Build + Drupal 8 theme</h4>
 
-Component-driven prototyping tool using [Pattern Lab v2](http://patternlab.io/) automated via Gulp/NPM. Also serves as _a starterkit_ Drupal 8 theme.
-
-## Requirements
-
-1.  [PHP 7.1](http://www.php.net/)
-2.  [Node (we recommend NVM)](https://github.com/creationix/nvm)
-3.  [Gulp](http://gulpjs.com/)
-4.  [Composer](https://getcomposer.org/)
-5.  Optional: [Yarn](https://github.com/yarnpkg/yarn)
-
-## Prototyping (separate from Drupal, Wordpress, etc.)
-
-SUNYOswego supports both NPM and YARN.
-
-Install with NPM:
-`composer create-project fourkitchens/sunyoswego:^2.0 --stability dev --no-interaction sunyoswego && cd sunyoswego && npm install`
-
-Install with Yarn:
-`composer create-project fourkitchens/sunyoswego:^2.0 --stability dev --no-interaction sunyoswego && cd sunyoswego && yarn install`
-
-## Drupal installation
-
-### In a Composer-based Drupal install (recommended)
-
-1. Require sunyoswego in your project `composer require fourkitchens/sunyoswego`
-2. Move into the original sunyoswego theme `cd web/themes/contrib/sunyoswego/`
-3. Create your new theme by cloning sunyoswego `php sunyoswego.php "THEME NAME"` (Run `php sunyoswego.php -h` for other available options)
-4. Move into your theme directory `cd web/themes/custom/THEME_NAME/`
-5. Install the theme dependencies `npm install` or `yarn install`
-6. Enable your theme and its dependencies `drush then THEME_NAME -y && drush en components unified_twig_ext -y`
-7. Proceed to the "Starting Pattern Lab…" section below
-
-If you're not using a Composer-based Drupal install (e.g. tarball download from drupal.org) installation [instructions can be found on the Wiki](https://github.com/fourkitchens/sunyoswego/wiki/Installation).
-
-Troubleshooting Installation: See [Drupal Installation FAQ](https://github.com/fourkitchens/sunyoswego/wiki/Installation#drupal-installation-faq).
-
-_Note: Once you've created your custom theme, you can remove SUNYOswego as a dependency of your project. If you'd like to get updates as we push them, solely for educational/best-practice information, feel free to leave it in and receive the updates. Updating SUNYOswego will not affect your custom theme in any way._
-
-## Starting Pattern Lab and watch task
-
-The `start` command spins up a local server, compiles everything (runs all required gulp tasks), and watches for changes.
-
-1.  `npm start` or `yarn start`
-
----
-
-## Highlighted Features
-
-<table><tbody>
-<tr><td>Lightweight</td><td>✔</td><td>SUNYOswego is focused on being as lightweight as possible.</td></tr>
-<tr><td>SVG sprite support </td><td><strong>✔</strong></td><td>Automated support for creating SVG sprites mixins/classes.</td></tr>
-<tr><td>Stock Drupal templates </td><td><strong>✔</strong></td><td>Templates from Stable theme - see /templates directory</td></tr>
-<tr><td>Stock Components </td><td><strong>✔</strong></td><td>with Drupal support built-in (https://github.com/fourkitchens/sunyoswego#sunyoswegos-built-in-components-with-drupal-support)</td></tr>
-<tr><td>Performance Testing </td><td><strong>✔</strong></td><td>Support for testing via Google PageSpeed Insights and WebPageTest.org (https://github.com/fourkitchens/sunyoswego/wiki/Gulp-Config#performance-testing)</td></tr>
-<tr><td>Automated Github Deployment </td><td><strong>✔</strong></td><td>Deploy your Pattern Lab instance as a Github page (https://github.com/fourkitchens/sunyoswego/wiki/Gulp-Config#deployment)</td></tr>
-</tbody></table>
-
-<h3 id="components">SUNYOswego's Built in Components with Drupal support</h3>
-Forms, tables, video, accordion, cards, breadcrumbs, tabs, pager, status messages, grid
-
-View a [demo of these default SUNYOswego components](https://fourkitchens.github.io/sunyoswego/pattern-lab/public/).
+SUNY Oswego Drupal is a part of the [SUNY Oswego Design System](https://github.com/sunyoswego-ds) and provides a [Storybook](https://storybook.js.org/) component library, a [Webpack](https://webpack.js.org/) development environment and a Drupal 8 starterkit theme. It can be used as a standalone prototyping tool or inside a Drupal installation. It supports both Twig and React components!!
 
 ## Documentation
 
-Documentation is currently provided in [the Wiki](https://github.com/fourkitchens/sunyoswego/wiki). Here are a few basic links:
+https://docs.sunyoswego.info/
 
-#### General Orientation
+### Quick Links
 
-See [Orientation](https://github.com/fourkitchens/sunyoswego/wiki/Orientation)
+1. [Installation](https://docs.sunyoswego.info/installation/design-system)
+2. [Usage](https://docs.sunyoswego.info/usage/commands)
 
-We have a [series of videos](https://www.youtube.com/playlist?list=PLO9S6JjNqWsGMQLDfE8Ekt0ryrGa3g4km) for you to learn more about SUNYOswego.
+## Demo
 
-#### For Designers (Prototyping)
+1. [Storybook](http://storybook.sunyoswego.info/)
 
-See [Designers](https://github.com/fourkitchens/sunyoswego/wiki/For-Designers)
+## Contributing
 
-#### For Drupal 8 Developers
+### [Code of Conduct](https://github.com/sunyoswego-ds/sunyoswego-drupal/blob/master/CODE_OF_CONDUCT.md)
 
-See [Drupal Usage](https://github.com/fourkitchens/sunyoswego/wiki/Drupal-Usage)
+The project maintainers have adopted a Code of Conduct that we expect project participants to adhere to. Please read the full text so that you can understand what actions will and will not be tolerated.
 
-#### Gulp Configuration
+### Contribution Guide
 
-See [Gulp Config](https://github.com/fourkitchens/sunyoswego/wiki/Gulp-Config)
+Please also follow the issue template and pull request templates provided. See below for the correct places to post issues:
+
+1. [SUNY Oswego Drupal](https://github.com/sunyoswego-ds/sunyoswego-drupal/issues)
+3. [SUNY Oswego Twig Extensions](https://github.com/sunyoswego-ds/sunyoswego-twig-extensions/issues)
+4. [SUNY Oswego Twig Drupal Module](https://www.drupal.org/project/issues/sunyoswego_twig)
+

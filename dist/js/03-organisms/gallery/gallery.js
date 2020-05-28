@@ -1,0 +1,1 @@
+"use strict";jQuery("body").imagesLoaded(function(){for(var a=document.querySelectorAll(".gallery"),b=0;b<a.length;b++)new Flickity(a[b],{contain:!1,selectedAttraction:.05,friction:.5,wrapAround:!0,pageDots:!0,setGallerySize:!0})});

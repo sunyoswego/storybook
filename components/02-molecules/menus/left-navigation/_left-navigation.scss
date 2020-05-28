@@ -1,0 +1,121 @@
+$menu-border-color: #f2f2f2;
+
+.left-nav {
+  position: relative;
+  #toggle-sidebar-nav {
+    display: block;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 0;
+    border: 1px solid $menu-border-color;
+    width: 100%;
+    //background: $oswego-green;
+    //color: white;
+    @include f5;
+  }
+
+  @media screen and (min-width: $large) {
+    &>.left-navigation {
+      display: block !important;
+      margin-bottom: 2rem;
+    }
+
+    #toggle-sidebar-nav {
+      display: none;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    border-right: 1px solid $menu-border-color;
+    border-left: 1px solid $menu-border-color;
+  }
+
+  .left-navigation {
+    display: none;
+    border-bottom: 1px solid $menu-border-color;
+    margin-top: 0;
+
+    @include rounded;
+    &.is-open {
+      display: block;
+      transition: max-height .5s;
+    }
+    li {
+      border-top: 1px solid $menu-border-color;
+      background: white;
+    }
+    a {
+      background-color: #fff;
+      padding: 1rem;
+      display: block;
+      text-decoration: none;
+      transition: all 0.5s;
+
+      &:hover {
+        padding: 1rem .75rem 1rem 1.25rem;
+        background-color: #fafafa;
+        transition: all 0.25s;
+      }
+    }
+    .left-navigation--sub {
+      border-radius: 0;
+      border-top: 1px solid $menu-border-color;
+      li {
+        border-top: none;
+      }
+    }
+
+  }
+  .left-navigation__link--active:not(.left-navigation__link--sub) {
+    position: relative;
+    background-color: #fafafa;
+    font-weight: 700;
+    //&::after {
+    //  content: "";
+    //  position: absolute;
+    //  left: 0;
+    //  width: 4px;
+    //  height: 1.5rem;
+    //  top: 50%;
+    //  transform: translateY(-50%);
+    //  background-color: $oswego-green;
+    //}
+  }
+  .active {
+    .expand-sub {
+      display: none;
+    }
+    .left-navigation--sub {
+      display: block;
+    }
+  }
+  .left-navigation--sub {
+    display: none;
+    border: none;
+    padding-left: 1rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    font-size: 0.9em;
+    &.sub-open {
+      display: block;
+    }
+    .expand-sub {
+      top: 0;
+      padding: 0.75rem;
+    }
+    .left-navigation__link--active {
+      font-weight: 700;
+    }
+    a {
+      border: 0 !important;
+      padding: .75rem .5rem;
+      &:hover {
+        padding: .75rem .5rem;
+        background: transparent;
+        color: black;
+      }
+    }
+  }
+}

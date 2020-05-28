@@ -1,0 +1,71 @@
+.header {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  position: relative;
+
+  .utility-nav {
+    display: none;
+
+    @include breakpoint($menu-breakpoint) {
+      display: flex;
+
+      li {
+        border-right: 1px solid $gray-lightest;
+        display: flex;
+        align-items: center;
+
+        &:last-child {
+          border-right: none;
+        }
+
+        .icon {
+          margin-bottom: 0.5rem;
+
+          @include f4;
+        }
+
+        a {
+          display: block;
+          text-decoration: none;
+          color: $gray-darker;
+          background-color: transparent;
+          transition: all 0.5s;
+          padding: 0.5rem 0.75rem;
+
+          @include f8;
+          @include uppercase;
+
+          &:hover {
+            background-color: $gray-lightest;
+            transition: all 0.25s;
+          }
+        }
+      }
+    }
+  }
+  &.header-new {
+    padding-top: 0;
+    max-width: 100%;
+    img {
+      max-width: 222px;
+    }
+    .secondary-menu {
+      @include f6;
+
+      margin: 0;
+      margin-bottom: 1rem;
+      //padding: .5rem 0;
+      a {
+        display: inline-block;
+        padding: .5rem .25rem;
+      }
+    }
+    .main-menu {
+      a {
+        padding: .5rem;
+      }
+    }
+  }
+}

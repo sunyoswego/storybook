@@ -1,0 +1,37 @@
+<div class="infographic-video">
+  <div class="infographic-video__inner">
+    {{ infographic_video_embed }}
+    <div class="infographic-video__content">
+      {{ infographic_content }}
+    </div>
+  </div>
+</div>
+
+{# <script src="https://player.vimeo.com/api/player.js"></script>
+<script type="text/javascript">
+  var iframe = document.querySelectorAll('iframe');
+  var players = [];
+  iframe.forEach(function(el) {
+    players.push(new Vimeo.Player(el));
+  });
+  jQuery(function($) {
+    let paused = false;
+    $('.ig-vid-bg-controls').click(function() {
+      if (!paused) {
+        players.forEach(function(el) {
+          el.pause();
+          $('.ig-vid-bg-controls button i').removeClass('fa-pause').addClass('fa-play');
+          $('.ig-vid-bg-controls button span').text("Play");
+          paused = true;
+        })
+      } else {
+        players.forEach(function(el) {
+          el.play();
+          $('.ig-vid-bg-controls button i').removeClass('fa-play').addClass('fa-pause');
+          $('.ig-vid-bg-controls button span').text("Pause");
+          paused = false;
+        })
+      }
+    });
+  });
+</script>   #}

@@ -1,0 +1,39 @@
+<header class="header header-new">
+    <div class="bg-lg">
+      <div class="container">
+          <ul class="flex list justify-end secondary-menu">
+              <li class=""><a class="main-menu__link" href="https://www.oswego.edu/news">News and Events</a></li>
+              <li class=""><a class="main-menu__link" href="https://www.oswegolakers.com">Athletics</a></li>
+              <li class=""><a class="main-menu__link" href="https://alumni.oswego.edu">Alumni and Friends</a></li>
+          </ul>
+      </div>
+    </div>
+    <div class="container">
+      <div class="flex justify-between items-center">
+          {% include "@atoms/04-images/00-image/_image.twig" with {
+            img_src: "logo.svg"
+          } %}
+
+          <div class="flex items-center">
+              <ul region="header" class="main-menu flex list">
+                  <li class=""><a class="main-menu__link" href="https://www.oswego.edu/about">About</a></li>
+                  <li class=""><a href="">Tuition & Aid</a></li>
+                  <li class=""><a class="main-menu__link" href="https://www.oswego.edu/academics">Academics</a></li>
+                  <li class=""><a class="main-menu__link" href="https://www.oswego.edu/admissions">Admissions</a></li>
+                  <li class=""><a class="main-menu__link" href="https://www.oswego.edu/student-life">Student Life</a></li>
+              </ul>
+            <div class="f3 bg-lg pa3">
+            {% include "@base/global/02-icons/_icon.twig" with {
+              name: "icon-search"
+            } %}
+            </div>
+          </div>
+
+          <button class="hamburger hamburger--spin" type="button">
+              <span class="hamburger-box">
+                  <span class="hamburger-inner"></span>
+              </span>
+          </button>
+        </div>
+    </div>
+</header>

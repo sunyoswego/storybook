@@ -1,0 +1,108 @@
+// Start libs
+// Better style reset
+@import "~normalize.css/normalize";
+@import "~breakpoint-sass/stylesheets/breakpoint";
+
+// End libs
+
+@import "00-base/**/*.scss";
+@import "01-atoms/**/*.scss";
+@import "02-molecules/**/*.scss";
+@import "03-organisms/**/*.scss";
+@import "04-templates/**/*.scss";
+@import "05-pages/**/*.scss";
+
+.eu-cookie-compliance-banner {
+  padding: 1rem 2rem;
+  .popup-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1280px;
+    p {
+      font-weight: normal;
+      display: block;
+      @include f6;
+    }
+  }
+  .eu-cookie-compliance-buttons {
+    margin: 0;
+  }
+  @media screen and (max-width: $medium) {
+    padding: 1rem;
+  }
+}
+
+button.agree-button {
+  @include button-white;
+
+  margin: 0;
+  margin-right: 1rem;
+}
+
+button.decline-button {
+  @include button-arrow;
+
+  color: white !important;
+  text-shadow: none;
+  margin: 0;
+}
+
+button.find-more-button {
+  @include button-arrow;
+
+  color: white !important;
+  text-shadow: none;
+  margin: 0;
+}
+
+.filter-darken {
+  color: white;
+  position: relative;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  li {
+    color: white;
+  }
+}
+
+.filter-darken::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.filter-darken .btn-arrow {
+  color: white;
+}
+
+.filter-darken .btn-arrow::after {
+  color: white;
+}
+
+.filter-darken .btn-arrow:hover {
+  color: white;
+}
+
+.filter-darken .btn-arrow:hover::after {
+  color: white;
+}
+
+.filter-darken > * {
+  position: relative;
+  z-index: 2;
+}
+
+.filter-darken .button {
+  box-shadow: 0 0 1rem -0.5rem #404040;
+}

@@ -1,0 +1,27 @@
+{{ attach_library('sunyoswego/hero') }}
+
+  <div class="hero">
+    {{ hero_media }}
+  <div class="hero__content">
+    {% if dinger_text %}
+      {% include "@atoms/02-text/00-headings/_heading.twig" with {
+          heading_level: 3,
+          heading: dinger_text,
+          heading_base_class: "dinger",
+          heading_blockname: "hero",
+          heading_utility: ['dinger','relative']
+      } %}
+    {% endif %}
+    {% include "@atoms/02-text/00-headings/_heading.twig" with {
+        heading_level: 1,
+        heading_blockname: "hero",
+        heading_base_class: "title"
+    } %}
+    {% if description_text %}
+      <p class="f4 pt2">{{ description_text }}</p>
+    {% endif %}
+    {% if link_url %}
+      {% include "@atoms/01-links/link/link.twig" %}
+    {% endif %}
+  </div>
+</div>

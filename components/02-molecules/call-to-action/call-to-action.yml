@@ -1,0 +1,6 @@
+cta_link_content:
+  include():
+    pattern: "atoms-link"
+    with:
+      link_utility_classes: ["button", "btn-white"]
+cta_content: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget urna et enim suscipit feugiat. Donec in neque nisi. Cras et erat ac nisi mattis egestas fermentum non justo. Pellentesque tincidunt, purus vel scelerisque luctus, magna ex euismod ante, non scelerisque enim libero eu ligula. Sed mattis metus elit, feugiat pharetra tortor rutrum in.</p>"

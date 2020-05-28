@@ -1,6 +1,8 @@
 <?php
 
-/**
+  use Drupal\block\Entity\Block;
+
+  /**
  * @file
  * Functions to support theming in the Pattern Lab theme.
  */
@@ -8,11 +10,47 @@ function sunyoswego_preprocess_page(&$variables) {
     $route_match = \Drupal::routeMatch();
     if ($route_match->getRouteName() == 'entity.node.canonical' && isset($variables['node'])) {
         $node = $variables['node'];
-        $variables['hero_render'] = $node->field_hero->view();
-        $variables['hero_render']['#label_display'] = "hidden";
+
+        if ($node->field_hero) {
+            $variables['page']['hero_render'] = $node->field_hero->view();
+            $variables['page']['hero_render']['#label_display'] = "hidden";
+        }
+
+        if ($node->field_full_width) {
+            $variables['page']['full_width_render'] = $node->field_full_width->view();
+            $variables['page']['full_width_render']['#label_display'] = "hidden";
+        }
+
+        //kint($variables['page']);
     }
 }
 
-function sunyoswego_preprocess_paragraph(&$variables) {
+function sunyoswego_preprocess_node(&$variables) {
+  if ($variables['node']->getType() == 'basic_page') {
+//    kint($variables['node']->getFields()['field_hero']);
+  }
+}
 
+/**
+ * Implements hook_preprocess_HOOK().
+ *
+ * Pass block region value to content so this can be used in
+ * MYTHEME_theme_suggestions_menu_alter.
+ */
+function sunyoswego_preprocess_block(&$variables) {
+  if (isset($variables['elements']['#id'])) {
+    $region = Block::load($variables['elements']['#id'])->getRegion();
+    $variables['content']['#attributes']['region'] = $region;
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ *
+ * Provide region based menu suggestions.
+ */
+function sunyoswego_theme_suggestions_menu_alter(&$suggestions, array $variables) {
+  if (isset($variables['attributes']['region'])) {
+    $suggestions[] = 'menu__' . $variables['menu_name'] . '__' . $variables['attributes']['region'];
+  }
 }

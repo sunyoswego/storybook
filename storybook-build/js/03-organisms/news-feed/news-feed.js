@@ -1,0 +1,1 @@
+"use strict";jQuery(function(a){a("[data-term-id]").each(function(b){var c=a(b).attr("data-term-id");a(".term-"+c).ajax({url:"https://www.oswego.edu/news/ajax/"+c}).done(function(a){alert("Data Saved: "+a)})})});

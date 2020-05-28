@@ -1,0 +1,29 @@
+.fancy-heading {
+  position: relative;
+  svg {
+    max-width: 25px;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    z-index: 1;
+    &::after {
+      content: "";
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      width: 400px;
+      height: 2px;
+      background: $oswego-green;
+    }
+  }
+  .st0 {
+    fill: $oswego-green;
+  }
+  h2 {
+    padding-top: 4rem;
+    position: relative;
+    margin-top: 0;
+    z-index: 2;
+  }
+}

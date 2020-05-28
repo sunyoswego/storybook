@@ -1,0 +1,78 @@
+{% embed "@templates/_default.twig" with {
+  menu_items: header.menu_items,
+  footer_menu_items: footer.menu_items,
+} %}
+
+  {% block page_hero %}
+    {% include "@molecules/hero/hero.twig" with {
+        heading: hero.heading_text,
+        heading_base_class: "title",
+        heading_blockname: "hero",
+        dinger_text: hero.dinger_text,
+        dinger_base_class: "dinger",
+        dinger_blockname: "hero",
+        description_text: hero.description_text,
+        hero_media: hero_media,
+        link_content: content.field_link.0['#title'],
+        link_url: content.field_link.0['#url'],
+        link_utility_classes: ['button', 'btn-white']
+    } %}
+  {% endblock %}
+
+  {% block page_full_width %}
+      <div class="pv5 bg-gr-wave-2">
+          <div class="container">
+              <div class="grid grid--columns-3">
+                  <div>
+                      <strong class="ttu f7 db tc-og">Seriously, check them out</strong>
+                      <h2 class="mt0">We've got some good programs</h2>
+                      <p class="mt3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Itaque et manendi in vita et migrandi ratio omnis iis rebus, quas supra dixi, metienda.</p>
+                  </div>
+                  <a href="https://www.oswego.edu/news/story/suny-chancellors-awards-honor-4-students-oswego" target="_blank" class="featured-card db fade-in-fwd">
+                      <div class="center flex items-end" style="background-image: url(https://www.oswego.edu/annual-report-2019/students-and-graduates/images/ofodile_jennifer_20190315_0006h.jpg)">
+                          <div class="featured-card__content">
+                              <p class="ma0 f3 b lh-solid">Undergraduate Programs</p>
+                              <p class="mt2 mb0 lh-title f6">Something else can go here</p>
+                          </div>
+                          <div class="ib button btn-white">More</div>
+                      </div>
+
+                  </a>
+                  <a href="https://www.oswego.edu/news/story/suny-chancellors-awards-honor-4-students-oswego" target="_blank" class="featured-card flex items-stretch db fade-in-fwd">
+                      <div class="center flex items-end" style="background-image: url(https://www.oswego.edu/annual-report-2019/education-ecosystem/images/20180423_chemistry_kahn_0715@0,25x.jpg)">
+                          <div class="featured-card__content">
+                              <p class="ma0 f3 b lh-solid gotham">Graduate Programs and Certificates</p>
+                              <p class="mt2 mb0 lh-title f6">Something else can go here</p>
+                          </div>
+                          <div class="ib button btn-white">More</div>
+                      </div>
+                  </a>
+              </div>
+          </div>
+      </div>
+    <div class="container">
+    <div class="pv5">
+      {% include "@organisms/card-grid/card-grid.twig" with {
+        "grid_blockname": "card",
+        "grid_modifiers": ["divider", "columns-3"]
+      } %}
+    </div>
+    </div>
+
+
+    <div class="pv5 bg-lg">
+        <div class="container">
+        <strong class="ttu f7 tc db tc-og">Seriously, check them out</strong>
+        <h2 class="tc">We've got some good programs</h2>
+    {% include "@organisms/infographics/01-infographics.twig" with {
+      "grid_blockname": "card"
+    } %}
+        </div>
+    </div>
+    <div class="">
+      {% include "@organisms/featured-blocks/featured-blocks.twig"  %}
+    </div>
+
+  {% endblock %}
+
+{% endembed %}

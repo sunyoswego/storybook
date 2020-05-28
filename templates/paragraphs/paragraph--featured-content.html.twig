@@ -41,5 +41,5 @@
   media: content.field_media,
   body: content.field_accompanying_text,
   heading: content.field_title,
-  media_uri: file_url(paragraph.field_media.entity.field_media_image.entity.fileuri)
+  media_uri: file_url(paragraph.field_media.entity.field_media_image.entity.fileuri|image_style('square_medium'))
 } %}

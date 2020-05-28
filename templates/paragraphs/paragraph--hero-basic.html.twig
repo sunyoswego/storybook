@@ -36,8 +36,16 @@
  * @ingroup themeable
  */
 #}
+{% set parent = paragraph._referringItem.parent.parent.entity %}
+
 {% include "@molecules/hero/hero.twig" with {
-    heading: paragraph.field_title.value,
+    heading: parent.title.value,
+
+    dinger_text: paragraph.field_dinger.value,
+
     description_text: paragraph.field_subtitle.value,
-    hero_img_src: file_url(paragraph.field_media.entity.field_media_image.entity.fileuri)
+    hero_media: content.field_media,
+    link_content: content.field_link.0['#title'],
+    link_url: content.field_link.0['#url'],
+    link_utility_classes: ['button', 'btn-white']
 } %}

@@ -1,0 +1,7 @@
+mini_hero_img_src: "//picsum.photos/1920/480"
+hero_media: "<div class=\"video-hero\"><div class=\"video-embed-field-provider-vimeo video-embed-field-responsive-video\"><iframe width=\"854\" height=\"480\" frameborder=\"0\" allowfullscreen=\"allowfullscreen\" src=\"https://player.vimeo.com/video/371410092?autoplay=1&amp;background=1\" data-ready=\"true\"
+></iframe></div></div>"
+image_base_class: "hero"
+heading: "This is the heading text"
+dinger_text: "This is the dinger text"
+description_text: "This is the description"

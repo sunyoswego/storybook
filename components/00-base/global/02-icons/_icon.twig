@@ -1,0 +1,22 @@
+{#
+/**
+ * Available variables:
+ * - icon_base_class - base class name
+ * - icon_modifiers - modifiers for icons (array)
+ * - icon_blockname - blockname prepended to the base classname
+ * - icon_name - the name of the icon
+ */
+#}
+{% set icon_base_class = icon_base_class|default('icon') %}
+{# For Pattern Lab: The icon_url is defined in _data/paths.json. No action is required #}
+{# For Drupal: The icon_url is defined in the following line. No action is required #}
+{% if not attributes %}
+  {% set icon_url = icon_url|default('') %}
+{% else %}
+  {% set icon_url = icon_url|default('/themes/custom/sunyoswego/svg/') %}
+{% endif %}
+{# {{ attach_library('sunyoswego/sprite') }} #}
+
+<svg class="icon {{ name }} {{icon_modifier}}">
+  <use xlink:href="{{ icon_url }}symbol-defs.svg#{{ name }}"></use>
+</svg>

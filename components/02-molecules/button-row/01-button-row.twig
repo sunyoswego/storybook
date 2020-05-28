@@ -1,0 +1,16 @@
+
+
+<div{{ attributes.addClass(classes) }}>
+    {% for content in content.field_buttons_4['#items'] %}
+{#        <ol>#}
+{#            {% for key, value in content.entity.field_link.0 %}#}
+{#                <li>{{ loop.index }}:::{{ key }}</li>#}
+{#            {% endfor %}#}
+{#        </ol>#}
+    {% include "@atoms/01-links/link/link.twig" with {
+        link_content: content.entity.field_link.0.title,
+        link_url: content.entity.field_link.0.uri,
+        link_utility_classes: ['button',content.entity.field_button_styles.0.markup]
+    }%}
+    {% endfor %}
+</div>

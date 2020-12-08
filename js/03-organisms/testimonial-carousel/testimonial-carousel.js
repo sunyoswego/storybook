@@ -1,0 +1,1 @@
+"use strict";jQuery("body").imagesLoaded(function(){var a=jQuery(".testimonials");jQuery(a).each(function(a,b){new Flickity(b,{setGallerySize:!0,fade:!0,prevNextButtons:!0})})});
